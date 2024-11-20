@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="ikoner/ikoner/css/all.css">
-    <link rel="stylesheet" href="ikoner/ikoner/css/brands.css">
-    <link rel="stylesheet" href="ikoner/ikoner/css/solid.css">
-    <title>Shoppingbagen</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/ikoner/ikoner/css/all.css">
+    <link rel="stylesheet" href="/ikoner/ikoner/css/brands.css">
+    <link rel="stylesheet" href="/ikoner/ikoner/css/solid.css">
+    <title>Klær</title>
 </head>
 <body>
     <header id="global-header">
         <a href="/index.html" class="logo">
-            <h1 id="main logo">LOGO</h1></a>
+            <h1 id="mainLogo">LOGO</h1></a>
 
             <form id="search-form">
                 <label for="search"></label>
@@ -32,7 +32,7 @@
                 <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </nav>
     </header>
-<body>
+
     <main>
         <h2>Checkout</h2>
             <ul class="checkoutliste">
@@ -62,23 +62,23 @@
     <section>
         <h2>Personopplysninger</h2>
         <form method="post">
-            <label for="navn">Navnet ditt:
-                <input type="text" name="navn" placeholder="Madina" id="navn" maxlenght="20" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+            <label for="navn"><!--Navnet ditt:-->
+                <input type="text" name="navn" placeholder="Madina" id="navn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
             </label>
-            <label for="email">Email:
-                <input type="email" name="email" placeholder="eksempel@hiof.no id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+            <label for="email"><!--Email:-->
+                <input type="email" name="email" placeholder="eksempel@hiof.no" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
             </label>
-            <label for="password">Passord: 
+            <label for="password"><!--Passord: -->
                 <input type="password" name="password" placeholder="********" id="password" minlength="8" required>
             </label>
-            <label for="number">Alder: 
+            <label for="number"><!--Alder: -->
                 <input type="number" name="number" id="number">
             </label>
-            <label for="tel">Telefonnummer: 
+            <label for="tel"><!--Telefonnummer:--> 
                 <input type="tel" name="tel" placeholder="12345678" id="tel" minlength="8" required>
             </label>
-            <label for="date">Dato
-                <input type="date" name="date" max="2023-12-31" required>
+            <label for="date"><!--Dato: -->
+                <input type="date" name="date" id="date" max="2023-12-31" required>
             </label>
             <button type="submit" class="save.button">Lagre</button>
             <button type="reset" class="cancel.button">Avbryt</button>
@@ -87,7 +87,7 @@
 
     <section>
         <h2>Leveringsmetode</h2>
-        <form method="post"></form>
+        <form method="post">
             <input type="radio" id="ekspress" name="levering" value="ekspress" required>
             <label for="ekspress">Ekspresslevering hjem</label><br>
             <input type="radio" id="hentepakke" name="levering" value="hentepakke" required>
@@ -110,10 +110,10 @@
 </main>
     
 <footer>
-        <secton class="logo-footer">
+        <section class="logo-footer">
             <h2>LOGO</h2>
             <p>Lorem Ipsum is simply dummy</p>
-        </secton>
+        </section>
         <section class="kontakt-footer">
             <h3 id="kontaktoss">KONTAKT OSS</h3>
             <p>Telefon: 69 60 80 01</p>

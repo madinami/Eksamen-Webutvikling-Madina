@@ -1,0 +1,76 @@
+
+
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 20px;
+    padding: 0; 
+    background-color: rgb(255, 255, 255);
+}
+
+#search-form input[type="search"] {
+    align-items: center;
+    width: 200px; 
+    height: 30px;
+    padding: 10px; 
+    border: 1,5px solid; 
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#search-form input[type="search-btn"]{
+    align-items: center;
+    background-color: transparent; 
+    padding: 10px 20px; /*søke ikonet knapp*/
+    cursor: pointer;
+    border: 1,5px;
+    border-radius: 20px;
+    position: absolute; 
+    right: 10px; 
+}
+
+#search-form input[type="submit"]:hover{
+    background-color: grey;
+} 
+
+.menypunkter {
+    display: flex; /*aktiverer flexboxen*/
+    flex-direction: column; /*plasserer alt vertikalt under hverandre*/
+    align-items: center; /*alle elementene blir sentrert horisonalt*/
+    justify-content: center; /*sentrerer alt vertikalt hvir det blir nødvendig*/
+    height: 20vh; /*Hvor høy nav elementet skal være på skjermen og hvor mye plass det skal ta*/
+    text-align: center; /*gjør at teksten i lenkene er sentrerte*/
+}
+
+.menypunkter a {
+    text-decoration: none; /*fjerner understrekning av lenker*/
+    font-size: 20px; /*ønsket størrelse på skrift*/
+    margin 5px 0;  /*legger til avstand mellom hjem produkter osv under hverandre*/
+    color: black; /*farge på lenkene*/
+}
+
+.menypunkter a:hover{
+    color: #333; /*øsnket farge ved hover*/
+    text-decoration: none; /*fjerner understrekning av lenker*/
+}
+
+
+.logo{
+    text-decoration: none; /*fjerner understrekning av lenker*/
+    font-size: 2rem;
+    color: black;
+    width: 500px;
+    margin: 0 15px;
+}
+
+#global-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background-color: rgb(131, 108, 108);
+   
+}
+
+
+
+

@@ -8,6 +8,16 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+
+#global-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: rgb(131, 108, 108);
+    padding: 50px 10;   
+}
+
 #search-form input[type="search"] {
     align-items: center;
     width: 200px; 
@@ -33,7 +43,7 @@ body{
     background-color: grey;
 } 
 
-.menypunkter {
+.menypunkter, .menypunkterb {
     display: flex; /*aktiverer flexboxen*/
     flex-direction: column; /*plasserer alt vertikalt under hverandre*/
     align-items: center; /*alle elementene blir sentrert horisonalt*/
@@ -42,33 +52,57 @@ body{
     text-align: center; /*gjør at teksten i lenkene er sentrerte*/
 }
 
-.menypunkter a {
+.menypunkter a, .menypunkterb a {
     text-decoration: none; /*fjerner understrekning av lenker*/
     font-size: 20px; /*ønsket størrelse på skrift*/
     margin 5px 0;  /*legger til avstand mellom hjem produkter osv under hverandre*/
     color: black; /*farge på lenkene*/
 }
 
-.menypunkter a:hover{
+.menypunkter a:hover, .menypunkterb a:hover{
     color: #333; /*øsnket farge ved hover*/
     text-decoration: none; /*fjerner understrekning av lenker*/
 }
 
-
-.logo{
-    text-decoration: none; /*fjerner understrekning av lenker*/
-    font-size: 2rem;
-    color: black;
-    width: 500px;
-    margin: 0 15px;
+.mainLogo{
+    font-size: 2rem; /*størrelse på Logoen*/
+    text-align: center;
+    display: block; /*logoen tar sin egen linje*/
+    margin: 20px 0;
 }
 
 #global-header{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column; 
-    background-color: rgb(131, 108, 108);
-   
+    justify-content: center;
+}
+
+a.logo{
+    order: 1;
+    text-decoration: none; /*fjerner understrekning av lenker*/
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menypunkter{
+    order: 0; 
+}
+
+.menypunkterb{
+    order: 2
+}
+
+.handlekurv{
+    display: flex;
+    margin-top: auto;
+}
+
+.handlekurv i {
+    font-size: 30px;
+    margin: 10px
+    color: black; 
 }
 
 

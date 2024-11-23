@@ -6,63 +6,104 @@ html, body {
     background-color: rgb(255, 255, 255);
 }
 
-/* Header */
-#global-header {
+
+#global-header{
     display: flex;
     flex-direction: column;
-    grid-template-columns: 100fr auto 100fr;
-    align-items: center;
+    grid-template-columns: 100fr auto 100fr; /*denne fiksa det med at bilde ikke gikk opp på sidene*/
+    align-items: center; /*Searchbaren, logo og ikoner flytter på seg*/
     background-color: rgb(131, 108, 108);
-    padding: 20px;
+    padding: 20px; /*kontrollerer hvor stor bakgrunnsfargen skal strekke seg*/  
 }
 
-#search-form {
-    position: relative;
-    width: 250px;
+#search-form{
+    position: relative; /*plasserer søkeikonet i searchbaren*/
+    width: 250px; /*hvor lang searchbaren skal være*/
 }
 
-#search-form input[type="search"] {
+#search-form input[type="search"] {/*søkedelen*/
     width: 100%;
     height: 30px;
-    padding: 15px;
+    padding: 15px; 
     padding-right: 40px;
+    border: 1,5px solid; 
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 20px; /*for teksten i søkedelen, står mindre om borte*/
     color: black;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 #search-form button#search-btn {
-    background-color: transparent;
+    background-color: transparent; 
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    border: 0;
-    cursor: pointer;
-    border-radius: 10px;
+    border: 0; /*ringen rundt search er borte*/
+    cursor: pointer; /*denne funker*/
+    border-radius: 10px; /*kantene på search ikonet er runde*/
     font-size: 20px;
 }
 
+#search-form button#search-btn:hover {
+    background-color: grey;
+} 
+
+
 .menypunkter, .menypunkterb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex; /*aktiverer flexboxen*/
+    flex-direction: column; /*plasserer alt vertikalt under hverandre*/
+    align-items: center; /*alle elementene blir sentrert horisonalt*/
+    justify-content: center; /*sentrerer alt vertikalt hvir det blir nødvendig*/
 }
 
 .menypunkter a, .menypunkterb a {
-    text-decoration: none;
-    font-size: 15px;
-    margin: 5px 0;
+    text-decoration: none; /*fjerner understrekning av lenker*/
+    font-size: 15px; /*ønsket størrelse på skrift*/
+    margin: 5px 0; /*legger til avstand mellom hjem produkter osv under hverandre*/
+    color: black; /*farge på lenkene*/
+}
+
+.menypunkter a:hover, .menypunkterb a:hover {
+    color: #333; /*øsnket farge ved hover*/
+    text-decoration: none; /*fjerner understrekning av lenker*/
+}
+
+.mainLogo{
+    max-width: 100%;
+    font-size: 2rem; /*størrelse på Logoen*/
+    display: block; /*logoen tar sin egen linje*/
+}
+
+a.logo{
+    order: 1;
+    text-decoration: none; /*fjerner understrekning av lenker*/
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.menypunkter{
+    order: 0; 
+}
+
+.menypunkterb{
+    order: 2;
+    padding-bottom: 15px;
+}
+
+
+.handlekurv{
+    order: 4;
+    display: flex;
+    margin-top: auto;
+    gap: 7px;
     color: black;
 }
 
-.mainLogo {
-    max-width: 100%;
-    font-size: 2rem;
-    display: block;
-}
+
+
+
 
 /* Footer */
 footer {
@@ -95,17 +136,18 @@ footer .logo-footer {
 
 footer .sosialemedier-footer {
     margin-top: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 footer .sosialemedier-footer a {
     text-decoration: none;
+    text-align: left;
     margin: 0 10px;
     color: white;
 }
 
 footer .sosialemedier-footer a i {
-    font-size: 24px;
+    font-size: 15px; /*hvor stor ikonene skal være*/
     transition: color 0.3s ease;
 }
 
@@ -116,30 +158,13 @@ footer .sosialemedier-footer a:hover i {
 footer h4 {
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 16px; /*underoverskriftene størrelse*/
 }
 
 footer p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 10px 0; /*avstanden mellom hver setning i logoen som adresse og e post*/
+    font-size: 15px; /*størrelsen på skriften i footern*/
 }
 
-/* Responsiv design */
-@media (max-width: 768px) {
-    footer .footer-content {
-        flex-direction: row; /* Holder seksjonene ved siden av hverandre på mobil også */
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 15px;
-    }
 
-    footer .footer-content section {
-        flex: 1;
-        min-width: 150px; /* Mindre bredde for små skjermer */
-    }
 
-    footer .sosialemedier-footer {
-        margin-top: 20px;
-        text-align: center;
-    }
-}

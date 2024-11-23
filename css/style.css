@@ -1,8 +1,9 @@
-/* Generelle regler */
-html, body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
+
+
+
+html, body{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0; 
     background-color: rgb(255, 255, 255);
 }
 
@@ -105,6 +106,7 @@ a.logo{
 
 
 
+
 /* Footer */
 footer {
     display: flex;
@@ -136,18 +138,17 @@ footer .logo-footer {
 
 footer .sosialemedier-footer {
     margin-top: 20px;
-    /* text-align: center; */
+    text-align: center;
 }
 
 footer .sosialemedier-footer a {
     text-decoration: none;
-    text-align: left;
     margin: 0 10px;
     color: white;
 }
 
 footer .sosialemedier-footer a i {
-    font-size: 15px; /*hvor stor ikonene skal være*/
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
@@ -158,12 +159,32 @@ footer .sosialemedier-footer a:hover i {
 footer h4 {
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-size: 16px; /*underoverskriftene størrelse*/
+    font-size: 16px;
 }
 
 footer p {
-    margin: 10px 0; /*avstanden mellom hver setning i logoen som adresse og e post*/
-    font-size: 15px; /*størrelsen på skriften i footern*/
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: row; /* Holder seksjonene ved siden av hverandre på mobil også */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    footer .footer-content section {
+        flex: 1;
+        min-width: 150px; /* Mindre bredde for små skjermer */
+    }
+
+    footer .sosialemedier-footer {
+        margin-top: 20px;
+        text-align: center;
+    }
 }
 
 

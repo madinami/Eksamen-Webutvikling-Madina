@@ -42,7 +42,7 @@ html, body{
     transform: translateY(-50%);
     border: 0; /*ringen rundt search er borte*/
     cursor: pointer; /*denne funker*/
-    border-radius: 10px; /*kantene på search ikonet er runde*/
+    border-radius: 20px; /*kantene på search ikonet er runde*/
     font-size: 20px;
 }
 
@@ -99,7 +99,42 @@ a.logo{
     display: flex;
     margin-top: auto;
     gap: 7px;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/*main på index.html*/
+.mestPopu{
+    padding: 20px; 
+    text-align: center;    
+    
+}
+
+.mestPopu h1{
+    font-size: 30px;
+    margin: 20px;
+    padding-bottom: 20px;
+    
+}
+
+
+.filter-btn{
+    margin: 5px;
+    padding: 7px 25px;
+    border: 1px solid black;
+    border-radius: 30px; 
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer; 
+    
+    
+}
+
+.filter-btn:hover{
+    background-color: black;
+    color:rgb(255, 255, 255)
+
 }
 
 
@@ -138,7 +173,6 @@ footer .logo-footer {
 
 footer .sosialemedier-footer {
     margin-top: 20px;
-    text-align: center;
 }
 
 footer .sosialemedier-footer a {
@@ -148,8 +182,8 @@ footer .sosialemedier-footer a {
 }
 
 footer .sosialemedier-footer a i {
-    font-size: 24px;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    transition: color 1.3s ease;
 }
 
 footer .sosialemedier-footer a:hover i {
@@ -158,7 +192,6 @@ footer .sosialemedier-footer a:hover i {
 
 footer h4 {
     margin-bottom: 10px;
-    text-transform: uppercase;
     font-size: 16px;
 }
 
@@ -181,10 +214,6 @@ footer p {
         min-width: 150px; /* Mindre bredde for små skjermer */
     }
 
-    footer .sosialemedier-footer {
-        margin-top: 20px;
-        text-align: center;
-    }
 }
 
 

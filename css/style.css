@@ -193,67 +193,46 @@ a.logo{
 }
 
 
-
-/*Populære-kategorier*/
-/* Styling for seksjonen "Populære kategorier" */
-.populære-kategorier {
-    display: flex; /* Flexbox for organisering */
-    flex-direction: column; /* Plasserer artiklene under hverandre */
-    gap: 20px; /* Avstand mellom kortene */
-    margin: 20px; /* Luft rundt seksjonen */
-}
-
-.populære-kategorier h3 {
+/* Styling for seksjonen "Populære produkter" */
+.popuPro h3 {
     text-align: left; /* Sentrer overskriften */
     font-size: 1.5rem; /* Størrelse på overskriften */
     margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
+    
 }
 
 /* Styling for hvert produktkort */
 .produkt-kort {
-    background: url("/img/women-1838768_640.jpg") center/cover no-repeat;
     display: flex;
-    flex-direction: column; /* Vertikal organisering av bilde og tekst */
+    background: url("/img/women-1838768_640.jpg") center/cover no-repeat;
     align-items: flex-start; /* Venstrestill innholdet */
+    flex-direction: column; /* Vertikal organisering av bilde og tekst */
     border: 2px solid black; /* Svart kant rundt kortene */
     border-radius: 10px; /* Runde hjørner */
-    padding: 15px; /* Innvendig avstand */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
     max-width: 150px 0px; /* Maks bredde for kortene */
-    height: 350px;
-    
+    height: 350px;   
 }
 
 h4, p {
-    
     font-size: 1rem; /* Størrelse på produktnavn */
     margin: 1px 0; /* Avstand rundt tekst */
     flex-wrap: wrap;
-    
 }
 
 
-.produkt-kort, .underoverskrift{
-
-}
-
-
-.produkt-kort, .pris { 
-
+.up { /*denne funker sikkert for footern, for å ikke bruke div*/
     display: flex;
-    justify-content: right;
-    font-size: rem; /* Størrelse på prisen */
-    color: #333; /* Farge for prisen */
-    margin: px 0; /* Avstand rundt tekst */
-    
+    align-items: left;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
-
-
 
 /* Generell styling for hjertet */
 .hjerte {
     position: absolute; /* Plasseres relativt til .produkt-kort */
-    right: 50px; /* Avstand fra høyre */
+    right: 30px; /* Avstand fra høyre */
     color: red; /* Fargen på hjertet */
     font-size: 1.5rem; /* Størrelse på ikonet */
     background-color: white; /* Bakgrunn for kontrast */
@@ -261,7 +240,6 @@ h4, p {
     padding: 4px; /* Avstand rundt ikonet */
     cursor: pointer; /* Gir håndpekeren ved hover */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lett skygge */
-    
 }
 
 /* Hover-effekt */
@@ -270,6 +248,35 @@ h4, p {
     transform: scale(1.2); /* Gjør ikonet litt større ved hover */
     transition: all 0.5s ease; /* Jevn overgang for endringer */
 }
+
+
+
+/*våre mest populære kategorier*/
+.popuKat {
+    display: flex; /* Flexbox for organisering */
+    align-items: center;
+    flex-direction: column; /* Plasserer artiklene under hverandre */
+    gap: 10px; /* Avstand mellom kortene */
+    margin: 20px; /* Luft rundt seksjonen */
+}
+
+.popuKat h3 {
+    text-align: left; /* Sentrer overskriften */
+    font-size: 1.5rem; /* Størrelse på overskriften */
+    margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
+}
+
+
+
+
+
+
+.popuKat h3 {
+    text-align: center; /* Sentrer overskriften */
+}
+
+
+
 
 
 

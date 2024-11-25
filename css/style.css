@@ -13,7 +13,7 @@ html, body{
     flex-direction: column;
     grid-template-columns: 100fr auto 100fr; /*denne fiksa det med at bilde ikke gikk opp på sidene*/
     align-items: center; /*Searchbaren, logo og ikoner flytter på seg*/
-    background-color: rgb(131, 108, 108);
+    background-color: rgb(255, 255, 255);
     padding: 20px; /*kontrollerer hvor stor bakgrunnsfargen skal strekke seg*/  
 }
 
@@ -218,33 +218,47 @@ a.logo{
     border: 2px solid black; /* Svart kant rundt kortene */
     border-radius: 10px; /* Runde hjørner */
     padding: 15px; /* Innvendig avstand */
-    box-shadow: 0 4px 6pxrgba(0, 0, 0, 0.1); /* Subtil skygge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
     max-width: 150px 0px; /* Maks bredde for kortene */
     height: 350px;
+    
 }
 
-.produkt-kort,  h3{
-    justify-content: ;
+h4, p {
+    
+    font-size: 1rem; /* Størrelse på produktnavn */
+    margin: 1px 0; /* Avstand rundt tekst */
+    flex-wrap: wrap;
+    
 }
 
 
-/* Styling for produktnavn */
-.produkt-kort h3 {
-    font-size: 1.2rem; /* Størrelse på navnet */
-    font-weight: bold; /* Fet tekst */
-    height: 200px;
-    width: 150px;
+.produkt-kort, .underoverskrift{
+
 }
+
+
+.produkt-kort, .pris { 
+
+    display: flex;
+    justify-content: right;
+    font-size: rem; /* Størrelse på prisen */
+    color: #333; /* Farge for prisen */
+    margin: px 0; /* Avstand rundt tekst */
+    
+}
+
+
 
 /* Generell styling for hjertet */
-.fa-heart {
+.hjerte {
     position: absolute; /* Plasseres relativt til .produkt-kort */
     right: 50px; /* Avstand fra høyre */
     color: red; /* Fargen på hjertet */
     font-size: 1.5rem; /* Størrelse på ikonet */
     background-color: white; /* Bakgrunn for kontrast */
     border-radius: 50%; /* Runde hjørner for bakgrunnen */
-    padding: 5px; /* Avstand rundt ikonet */
+    padding: 4px; /* Avstand rundt ikonet */
     cursor: pointer; /* Gir håndpekeren ved hover */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lett skygge */
     
@@ -254,8 +268,10 @@ a.logo{
 .fa-heart:hover {
     color: darkred; /* Endrer hjertets farge ved hover */
     transform: scale(1.2); /* Gjør ikonet litt større ved hover */
-    transition: all 0.3s ease; /* Jevn overgang for endringer */
+    transition: all 0.5s ease; /* Jevn overgang for endringer */
 }
+
+
 
 
 

@@ -275,6 +275,43 @@ h4, p {
     text-align: center; /* Sentrer overskriften */
 }
 
+.popuKat p{
+    padding-bottom: 20px;
+}
+
+
+.popuKat .kat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Vertikal organisering av bilde og tekst */
+    border: 2px solid black; /* Svart kant rundt kortene */
+    border-radius: 10px; /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
+    max-width: 150px 0px; /* Maks bredde for kortene */
+    height: 350px;    
+    width: 300px;  /*det sto 150 i oppgaveteksten, men vi har ikke fått bra nok instruksjoner på om den skal følges. når A krav videoen viser til 300px i bredden*/
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.popuKat .kategori3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Vertikal organisering av bilde og tekst */
+    border: 2px solid black; /* Svart kant rundt kortene */
+    border-radius: 10px; /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
+    max-width: 150px 0px; /* Maks bredde for kortene */
+    height: 500px;    
+    width: 300px; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
 
 
 

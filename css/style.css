@@ -105,8 +105,7 @@ a.logo{
 
 
 /*main på index.html*/
-
-/* Styling for bannerseksjonen */
+/* Styling for bannerseksjonen; - velkommen til nettbutikken vår */
 .banner {
     display: flex; /* Aktiver flexbox */
     flex-direction: column; /* Plasser elementene vertikalt */
@@ -130,14 +129,12 @@ a.logo{
     font-size: 2rem; /* Størrelse på ingressen */
 }
 
-
 /* Styling for ingressen */
 .banner p {
     font-size: 1rem; 
     margin-bottom: 40px; 
     max-width: 500px; 
     line-height: 1.1; 
-    
 }
 
 /* Styling for knappen */
@@ -164,21 +161,16 @@ a.logo{
 
 
 
-
-
-
+/*våre mest populære produkter*/
 .mestPopu{
     padding: 20px; 
     text-align: center;    
-    
 }
 
 .mestPopu h1{
     font-size: 30px;
     margin: 20px;
     padding-bottom: 20px;
-
-    
 }
 
 
@@ -198,8 +190,74 @@ a.logo{
 .filter-btn:hover{
     background-color: black;
     color:rgb(255, 255, 255)
-
 }
+
+
+
+/*Populære-kategorier*/
+/* Styling for seksjonen "Populære kategorier" */
+.populære-kategorier {
+    display: flex; /* Flexbox for organisering */
+    flex-direction: column; /* Plasserer artiklene under hverandre */
+    gap: 20px; /* Avstand mellom kortene */
+    margin: 20px; /* Luft rundt seksjonen */
+}
+
+.populære-kategorier h3 {
+    text-align: left; /* Sentrer overskriften */
+    font-size: 1.5rem; /* Størrelse på overskriften */
+    margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
+}
+
+/* Styling for hvert produktkort */
+.produkt-kort {
+    background: url("/img/women-1838768_640.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column; /* Vertikal organisering av bilde og tekst */
+    align-items: flex-start; /* Venstrestill innholdet */
+    border: 2px solid black; /* Svart kant rundt kortene */
+    border-radius: 10px; /* Runde hjørner */
+    padding: 15px; /* Innvendig avstand */
+    box-shadow: 0 4px 6pxrgba(0, 0, 0, 0.1); /* Subtil skygge */
+    max-width: 150px 0px; /* Maks bredde for kortene */
+    height: 350px;
+}
+
+.produkt-kort,  h3{
+    justify-content: ;
+}
+
+
+/* Styling for produktnavn */
+.produkt-kort h3 {
+    font-size: 1.2rem; /* Størrelse på navnet */
+    font-weight: bold; /* Fet tekst */
+    height: 200px;
+    width: 150px;
+}
+
+/* Generell styling for hjertet */
+.fa-heart {
+    position: absolute; /* Plasseres relativt til .produkt-kort */
+    right: 50px; /* Avstand fra høyre */
+    color: red; /* Fargen på hjertet */
+    font-size: 1.5rem; /* Størrelse på ikonet */
+    background-color: white; /* Bakgrunn for kontrast */
+    border-radius: 50%; /* Runde hjørner for bakgrunnen */
+    padding: 5px; /* Avstand rundt ikonet */
+    cursor: pointer; /* Gir håndpekeren ved hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lett skygge */
+    
+}
+
+/* Hover-effekt */
+.fa-heart:hover {
+    color: darkred; /* Endrer hjertets farge ved hover */
+    transform: scale(1.2); /* Gjør ikonet litt større ved hover */
+    transition: all 0.3s ease; /* Jevn overgang for endringer */
+}
+
+
 
 
 

@@ -105,6 +105,68 @@ a.logo{
 
 
 /*main på index.html*/
+
+/* Styling for bannerseksjonen */
+.banner {
+    display: flex; /* Aktiver flexbox */
+    flex-direction: column; /* Plasser elementene vertikalt */
+    justify-contet: center; /* Sentrer innholdet vertikalt */
+    align-items: flex-end; /* Juster teksten til venstre */
+    text-align: right;
+    background: linear-gradient(rgba(32, 24, 32, 0.5), rgba(128, 0, 128, 0.5)), 
+    url("/img/kirke.jpg") center/cover no-repeat;
+    height: 600px; /* Høyde på banneren */
+    width: 100%; /* Full bredde */
+    padding-left: 250px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 20px; /* Runde hjørner */
+    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
+    font-weight: bold;
+}
+
+.banner h3 {
+    font-size: 2rem; /* Størrelse på ingressen */
+}
+
+
+/* Styling for ingressen */
+.banner p {
+    font-size: 1rem; 
+    margin-bottom: 40px; 
+    max-width: 500px; 
+    line-height: 1.1; 
+    
+}
+
+/* Styling for knappen */
+.seMer{
+    margin: 5px;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 30px; 
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer; 
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+.seMer:hover{
+    background-color: black;
+    color:rgb(255, 255, 255)
+}
+
+
+
+
+
+
+
+
+
+
 .mestPopu{
     padding: 20px; 
     text-align: center;    
@@ -115,20 +177,22 @@ a.logo{
     font-size: 30px;
     margin: 20px;
     padding-bottom: 20px;
+
     
 }
 
 
 .filter-btn{
     margin: 5px;
-    padding: 7px 25px;
+    padding: 10px 25px;
     border: 1px solid black;
     border-radius: 30px; 
     color: rgb(0, 0, 0);
     font-size: 15px;
     cursor: pointer; 
-    
-    
+    justify-content: space-between;
+    line-height: 1.2;
+    width: 120px;
 }
 
 .filter-btn:hover{

@@ -313,10 +313,12 @@ h4, p {
 
 
 
+
 /*annmeldelser*/
 .anmldelser {
     text-align: center;
     padding: 20px;
+    overflow: hidden; /* Skjul innhold utenfor containeren */
 }
 
 .anmldelser h2 {
@@ -324,69 +326,53 @@ h4, p {
     margin-bottom: 20px;
 }
 
-.anmldelser {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out; /* Jevn overgang for slideren */
-    width: 100%;
+/* Container for anmeldelseskort */
+.anmeldelseskort {
+    display: flex; /* Plasser artikler horisontalt */
+    gap: 20px; /* Avstand mellom kortene */
+    overflow-x: auto; /* Aktiver horisontal scrolling */
+    scroll-snap-type: x mandatory; /* Scroll Snap for horisontal scrolling */
+    padding: 10px;
+    scrollbar-width: none; /* Skjuler scrollbar for Firefox */
 }
 
-.anmldelser article {
-    flex: 0 0 300px; /* Fast bredde for hvert kort */
+.anmeldelseskort::-webkit-scrollbar {
+    display: none; /* Skjuler scrollbar for Chrome, Safari */
+}
+
+/* Styling for hvert kort */
+.anmeldelseskort article {
+    flex: 0 0 200px; /* Hver artikkel har fast bredde */
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: star; /* Snap til start av hver artikkel */
     text-align: left;
 }
 
-.anmldelser article img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+/* Bilde styling */
+.anmeldelseskort article img {
+    width: 80px; /* Bredde på bildet */
+    height: 80px; /* Høyde på bildet */
+    border-radius: 50%; /* Gjør bildet rundt */
+    object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge det */
+    border: 2px solid #ddd; /* Legger til en kantlinje */
+    
 }
 
-.anmldelser article h4 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+/* Tekst i kortene */
+.anmeldelseskort article h5 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
 }
 
-.anmldelser article p {
+.anmeldelseskort article p {
+    padding-top: 10px;
     font-size: 0.9rem;
     color: #333;
 }
-
-.anmldelser .prev, .anmldelser .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.anmldelser .prev {
-    left: 10px;
-}
-
-.anmldelser .next {
-    right: 10px;
-}
-
-.anmldelser .prev:hover, .anmldelser .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-
-
 
 
 

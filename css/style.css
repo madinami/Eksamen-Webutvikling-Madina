@@ -159,8 +159,6 @@ a.logo{
 
 
 
-
-
 /*våre mest populære produkter*/
 .mestPopu{
     padding: 20px; 
@@ -172,7 +170,6 @@ a.logo{
     margin: 20px;
     padding-bottom: 20px;
 }
-
 
 .filter-btn{
     margin: 5px;
@@ -191,7 +188,6 @@ a.logo{
     background-color: black;
     color:rgb(255, 255, 255)
 }
-
 
 /* Styling for seksjonen "Populære produkter" */
 .popuPro h3 {
@@ -219,7 +215,6 @@ h4, p {
     margin: 1px 0; /* Avstand rundt tekst */
     flex-wrap: wrap;
 }
-
 
 .up { /*denne funker sikkert for footern, for å ikke bruke div*/
     display: flex;
@@ -251,6 +246,7 @@ h4, p {
 
 
 
+
 /*våre mest populære kategorier*/
 .popuKat {
     display: flex; /* Flexbox for organisering */
@@ -266,11 +262,6 @@ h4, p {
     margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
 }
 
-
-
-
-
-
 .popuKat h3 {
     text-align: center; /* Sentrer overskriften */
 }
@@ -278,7 +269,6 @@ h4, p {
 .popuKat p{
     padding-bottom: 20px;
 }
-
 
 .popuKat .kat {
     display: flex;
@@ -314,7 +304,7 @@ h4, p {
 
 
 
-/*annmeldelser*/
+/*annmeldelses kortene*/
 .anmldelser {
     text-align: center;
     padding: 20px;
@@ -358,8 +348,7 @@ h4, p {
     height: 80px; /* Høyde på bildet */
     border-radius: 50%; /* Gjør bildet rundt */
     object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge det */
-    border: 2px solid #ddd; /* Legger til en kantlinje */
-    
+    border: 2px solid #ddd; /* Legger til en kantlinje */   
 }
 
 /* Tekst i kortene */
@@ -373,6 +362,119 @@ h4, p {
     font-size: 0.9rem;
     color: #333;
 }
+
+
+
+/*Checkout handlekurven*/
+main {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for checkout list */
+.checkoutliste {
+    display: flex;
+    flex-direction: column;/*får den til å gå nedover*/
+    gap: 10px; /* Avstand mellom produktene */
+}
+
+/* Overskrift styling */
+.checkoutliste h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+/* For å style checkoutlisten cuz den ser stygg ut */
+.checkoutliste figure {
+    display: flex;
+    gap: 20px; /* Avstand mellom bilde og figcaption */
+    align-items: flex-start; /* Juster elementene til toppen */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Runde hjørner */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bilde styling */
+.checkoutbilde {
+    width: 150px;
+    height: auto;
+    border-radius: 10px; /* Runde hjørner */
+    object-fit: cover; /* Sørg for at bildet fyller boksen proporsjonalt */
+}
+
+/* Figcaption styling */
+figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; /* Fyller tilgjengelig plass */
+}
+
+/* Produktnavn styling */
+figcaption h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Pris styling */
+figcaption .pris {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Farge styling */
+figcaption .Farge {
+    font-size: 1 rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Kontrollseksjon for størrelse og antall */
+.str {
+    display: flex;
+    gap: 10px; /* Avstand mellom størrelse og antall */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.str label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.str select, .str input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 60px;
+    cursor: pointer;
+}
+
+.str select {
+    background-color: rgb(209, 209, 209);
+}
+
+/* Ikonseksjon */
+.ik {
+    display: flex;
+    gap: 10px; /* Avstand mellom ikonene */
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.ik i:hover {
+    color: #953131;
+    cursor: pointer;
+}
+
 
 
 

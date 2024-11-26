@@ -115,31 +115,40 @@
             </section>
     <section class="pers">
         <h2>2. DINE OPPLYSNINGER</h2>
-        <form method="post">
-            <label for="navn">Navn<!--Navnet ditt:-->
+        <form method="post" class="opplysninger">
+            <h4>Leveringsadresse</h4>
+            <label for="navn"><strong>Navn</strong><!--Navnet ditt:-->
                 <input type="text" name="navn" placeholder="Madina" id="navn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
             </label>
-            <label for="etternavn">Etternavn<!--Etternavn:-->
+            <label for="etternavn"><strong>Etternavn</strong><!--Etternavn:-->
                 <input type="text" name="navn" placeholder="IQ" id="etternavn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
             </label>
 
-            <label for="antall">Antall</label>
-            <input type="number" id="antall" value="1" min="4000">
-            
+            <label for="gateadresse"><strong>Gateadresse</strong></label>
+            <input type="text" id="gateadresse" placeholder=" B R A veien 4" required>
 
+            <label for="postnummer"><strong>Postnummer</strong></label>
+            <input type="number" id="postnummer" placeholder="1752" required> 
 
-        <section class="Kontaktinformasjon">Kontaktinformasjon
-            <label for="email">E-post<!--Email:-->
+            <label for="poststed"><strong>Poststed</strong>placeholder=</label>
+            <input type="text" id="poststed" placeholder="Halden" required>
+        </form>
+    </section>
+
+    <section class="Kontaktinformasjon">
+        <form method="post" class="opplysninger"></form>
+                <h4>Kontaktinformasjon</h4>
+            <label for="email"><strong>E-post</strong><!--Email:-->
                 <input type="email" name="email" placeholder="eksempel@hiof.no" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
             </label>
-            <label for="tel">Telefon<!--Telefonnummer:--> 
+            <label for="tel"><strong>Telefon</strong><!--Telefonnummer:--> 
                 <input type="tel" name="tel" placeholder="12345678" id="tel" minlength="8" required>
             </label>
         </section>
             <button type="submit" class="save.button">Lagre</button>
             <button type="reset" class="cancel.button">Avbryt</button>
-        </form>
-    </section>
+        
+
 
     <section>
         <h2>3. LEVERING</h2>
@@ -163,12 +172,13 @@
     </section>
         
     <section>
-        <h3>4. BETALNING <i class="fa-solid fa-credit-card"></i></h3> 
+        <h2>4. BETALNING<p>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p></h2> 
         <label for="kortnummer">Kortnummer</label>
-        <input type="text" id="kortnummer" placeholder="3423 4793 **** 2093">
+        <input type="number" id="kortnummer" placeholder="3423 4793 **** 2093">
 
         <label for="utløpsdato">Utløpsdato</label>
-        <input for="text" id="utløpsdato" placeholder="mm/dd/yyyy">
+        <input type="date" id="utløpsdato" placeholder="mm/dd/yyyy">
+        
 
         <label for="cvc">CVC/CVV</label>
         <input type="text" is="cvc" placeholder="cvc/cvv">

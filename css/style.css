@@ -316,7 +316,6 @@ h4, p {
     margin-bottom: 20px;
 }
 
-/* Container for anmeldelseskort */
 .anmeldelseskort {
     display: flex; /* Plasser artikler horisontalt */
     gap: 20px; /* Avstand mellom kortene */
@@ -329,6 +328,8 @@ h4, p {
 .anmeldelseskort::-webkit-scrollbar {
     display: none; /* Skjuler scrollbar for Chrome, Safari */
 }
+
+
 
 /* Styling for hvert kort */
 .anmeldelseskort article {
@@ -365,6 +366,7 @@ h4, p {
 
 
 
+
 /*Checkout handlekurven*/
 main {
     padding: 10px;
@@ -381,7 +383,6 @@ main {
 /* Overskrift styling */
 .checkoutliste h2 {
     font-size: 1.8rem;
-    text-transform: uppercase;
     margin-bottom: 20px;
     padding-left: 40px;
 }
@@ -436,30 +437,57 @@ figcaption .Farge {
 }
 
 /* Kontrollseksjon for størrelse og antall */
+/* Styling for størrelse og antall-seksjonen */
 .str {
     display: flex;
     gap: 10px; /* Avstand mellom størrelse og antall */
-    align-items: center;
-    margin-top: 10px;
+    align-items: center; /* Juster vertikalt */
+    margin-top: 10px; /* Avstand over seksjonen */
 }
 
+/* Styling for etiketter */
 .str label {
     font-size: 0.9rem;
     color: #333;
 }
 
+/* Styling for dropdown og input-feltene */
 .str select, .str input {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    width: 60px;
-    cursor: pointer;
+    padding: 5px; /* Innvendig avstand */
+    border: 1px solid #ddd; /* Lys grå kant */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 0.9rem; /* Tekststørrelse */
+    width: 60px; /* Bredde */
+    cursor: pointer; /* Klikkbar markør */
 }
 
+/* Styling for dropdown (Størrelse-feltet) */
 .str select {
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(209, 209, 209); /* Lys grå bakgrunn */
 }
+
+/* Styling for antall-input (Sørger for at pilene vises konstant) */
+.str input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+    -webkit-appearance: number-input; /* For Chrome og Safari */
+    appearance: number-input; /* Sørger for at pilene vises i moderne nettlesere */
+    text-align: center; /* Sentraliser tekst og tall */
+}
+
+/* Justering av opp- og ned-piler */
+.str input[type="number"]::-webkit-inner-spin-button,
+.str input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: inner-spin-button; /* Sørger for synlige piler */
+    opacity: 1; /* Gjør pilene alltid synlige */
+    margin: 0; /* Fjern margin */
+}
+
+.str input[type="number"]::-moz-inner-spin-button {
+    -moz-appearance: inner-spin-button; /* Synlige piler i Firefox */
+    opacity: 1;
+}
+
+
 
 /* Ikonseksjon */
 .ik {
@@ -474,6 +502,116 @@ figcaption .Farge {
     color: #953131;
     cursor: pointer;
 }
+
+/*Kode for 2.DINE OPPLYSNINGER - checkoutside*/
+section, .kontaktinformasjon {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Avstand mellom teksten og ikonet */
+}
+
+label {
+    display: block; /* Sørg for at etiketten står over input */
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    padding-left: 10px;
+    color: #aaa;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    background-color: #f9f9f9; /* Lys bakgrunn for input */
+    color: #333;
+}
+
+input:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.saveButton, .cancelButton{
+    align-items: center;
+    width: 100%;
+    background-color: #333; /* Mørk bakgrunn */
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+button:hover {
+    background-color: #555; /* Lysere grå ved hover */
+}
+
+a {
+    display: block; /* Sørger for at lenken står på en egen linje */
+    text-align: center;
+    font-size: 0.9rem;
+    color: blue;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Styling for feltet med id "kortnummer" */
+#kortnummer {
+    -moz-appearance: textfield; /* Fjern standard stil i Firefox */
+    -webkit-appearance: none; /* Fjern standard stil i Chrome/Safari */
+    appearance: none; /* Fjern standard stil i moderne nettlesere */
+    width: 100%; /* Full bredde */
+    padding-right: 15px; /* Gi plass til pilene */
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Lett grå kant */
+    border-radius: 5px; /* Runde hjørner */
+    text-align: left; /* Venstrejusterer tekst */
+    background-color: #fff;
+    box-sizing: border-box; /* Sørg for at padding og bredde ikke overlapper */
+}
+/* Stil for opp- og ned-piler i Chrome/Safari */
+#kortnummer::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button; /* Behold pilene i Chrome/Safari */
+    opacity: 1; /* Sørg for at pilene alltid er synlige */
+}
+/* Stil for opp- og ned-piler i Firefox */
+#kortnummer::-moz-inner-spin-button {
+    -moz-appearance: inner-spin-button; /* Behold pilene i Firefox */
+    opacity: 1; 
+}
+
+
+
+
 
 
 

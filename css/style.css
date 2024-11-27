@@ -387,23 +387,10 @@ main {
     padding-left: 40px;
 }
 
-/* For å style checkoutlisten cuz den ser stygg ut */
-.checkoutliste figure {
-    display: flex;
-    gap: 20px; /* Avstand mellom bilde og figcaption */
-    align-items: flex-start; /* Juster elementene til toppen */
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Runde hjørner */
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Bilde styling */
 .checkoutbilde {
     width: 150px;
     height: auto;
-    border-radius: 10px; /* Runde hjørner */
     object-fit: cover; /* Sørg for at bildet fyller boksen proporsjonalt */
 }
 
@@ -485,6 +472,7 @@ figcaption .Farge {
 .str input[type="number"]::-moz-inner-spin-button {
     -moz-appearance: inner-spin-button; /* Synlige piler i Firefox */
     opacity: 1;
+    
 }
 
 
@@ -496,6 +484,7 @@ figcaption .Farge {
     margin-top: 10px;
     font-size: 1.2rem;
     color: #333;
+    
 }
 
 .ik i:hover {
@@ -507,48 +496,10 @@ figcaption .Farge {
 section, .kontaktinformasjon {
     font-family: Arial, sans-serif;
     padding: 20px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Avstand mellom teksten og ikonet */
-}
-
-label {
-    display: block; /* Sørg for at etiketten står over input */
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-input::placeholder {
-    padding-left: 10px;
-    color: #aaa;
-}
-
-input[type="text"], input[type="email"], input[type="tel"] {
-    background-color: #f9f9f9; /* Lys bakgrunn for input */
-    color: #333;
-}
-
-input:focus {
-    border-color: #555;
-    outline: none;
+    font-size: 1.8rem;
+    margin-bottom: 20px; 
 }
 
 .saveButton, .cancelButton{
@@ -565,24 +516,57 @@ input:focus {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Avstand mellom teksten og ikonet */
+}
+
+label {
+    display: block; /* Sørg for at etiketten står over input */
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;  
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    padding-left: 10px;
+    color: #aaa;
+    
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    background-color: #f9f9f9; /* Lys bakgrunn for input */
+    color: #333;
+}
+
+input:focus {
+    border-color: #555;
+    outline: none;
+}
+
 
 button:hover {
     background-color: #555; /* Lysere grå ved hover */
-}
-
-a {
-    display: block; /* Sørger for at lenken står på en egen linje */
-    text-align: center;
-    font-size: 0.9rem;
-    color: blue;
-    text-decoration: none;
-    margin-top: 10px;
+    
 }
 
 a:hover {
     text-decoration: underline;
 }
-
 
 /* Styling for feltet med id "kortnummer" */
 #kortnummer {
@@ -609,8 +593,105 @@ a:hover {
     opacity: 1; 
 }
 
+.Kontaktinformasjon {
+    border: 1px solid #ddd; /* Lys grå kant */  
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top: #fff;
+}
+.pers { 
+    border: 1px solid #ddd; /* Lys grå kant */  
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: #fff;
+}
+.ekspress, .standard, .hentepakke, .leveres, .betal, .personsvern, .checkoutliste {
+    border: 1px solid #ddd; /* Lys grå kant */  
+    margin: 20px;   
+}
+
+.personvern .h1, .personvern ,yp {
+    text-align: center; /* Sentraliser teksten horisontalt */
+    margin: 10px 0; /* Jevn avstand mellom elementene */
+}
 
 
+
+.betalingsseksjon {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd; /* Ramme rundt seksjonen */
+    border-radius: 10px; /* Runde hjørner */
+    max-width: 400px; /* Maks bredde for seksjonen */
+    margin: 20px auto; /* Sentraliser seksjonen */
+}
+
+.betalingsseksjon p {
+    margin: 10px 0; /* Avstand mellom paragrafene */
+    font-size: 1rem;
+    color: #333;
+}
+
+.betalingsseksjon h1 {
+    font-size: 2rem; /* Størrelse på prisen */
+    font-weight: bold;
+    margin: 10px 0;
+    color: black;
+}
+
+.fullfør-knapp {
+    background-color: #333; /* Svart bakgrunn */
+    color: white; /* Hvit tekst */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Runde hjørner */
+    cursor: pointer;
+    margin: 15px 0;
+    width: 100%; /* Full bredde */
+}
+
+.fullfør-knapp:hover {
+    background-color: #555; /* Lysere svart ved hover */
+}
+
+.bekreftelse-tekst {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.5; /* Gir bedre lesbarhet */
+}
+
+.nyhetsbrev {
+    font-size: 0.9rem;
+    color: #333;
+    display: block; /* Hver label på egen linje */
+    margin: 10px 0;
+    text-align: left; /* Venstrejustering */
+}
+
+.nyhetsbrev input {
+    margin-right: 10px; /* Avstand mellom checkbox og tekst */
+}
+
+
+
+
+
+
+
+
+
+
+/*Product.html siden*/
+.litebilde{
+    
+}
+
+.stortbilde{
+
+}
 
 
 

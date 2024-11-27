@@ -111,18 +111,17 @@
                             </section>
                     </figcaption>
                 </figure>
-        
             </section>
+            
     <section class="pers">
         <h2>2. DINE OPPLYSNINGER</h2>
         <form method="post" class="opplysninger">
             <h4>Leveringsadresse</h4>
-            <label for="navn"><strong>Navn</strong><!--Navnet ditt:-->
-                <input type="text" name="navn" placeholder="Madina" id="navn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
-            </label>
-            <label for="etternavn"><strong>Etternavn</strong><!--Etternavn:-->
-                <input type="text" name="navn" placeholder="IQ" id="etternavn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
-            </label>
+            <label for="navn"><strong>Navn</strong><!--Navnet ditt:--></label>
+            <input type="text" name="navn" placeholder="Madina" id="navn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
+
+            <label for="etternavn"><strong>Etternavn</strong><!--Etternavn:--></label>
+            <input type="text" name="navn" placeholder="IQ" id="etternavn" maxlength="20" pattern="[A-Za-zæøåÆØÅ ]{2,}">
 
             <label for="gateadresse"><strong>Gateadresse</strong></label>
             <input type="text" id="gateadresse" placeholder=" B R A veien 4" required>
@@ -130,7 +129,7 @@
             <label for="postnummer"><strong>Postnummer</strong></label>
             <input type="number" id="postnummer" placeholder="1752" required> 
 
-            <label for="poststed"><strong>Poststed</strong>placeholder=</label>
+            <label for="poststed"><strong>Poststed</strong></label>
             <input type="text" id="poststed" placeholder="Halden" required>
         </form>
     </section>
@@ -144,34 +143,41 @@
             <label for="tel"><strong>Telefon</strong><!--Telefonnummer:--> 
                 <input type="tel" name="tel" placeholder="12345678" id="tel" minlength="8" required>
             </label>
+
+            <button type="submit" class="saveButton">Lagre</button>
+            <button type="reset" class="cancelButton">Avbryt</button>
         </section>
-            <button type="submit" class="save.button">Lagre</button>
-            <button type="reset" class="cancel.button">Avbryt</button>
         
 
 
-    <section>
+    <section class="leveres">
         <h2>3. LEVERING</h2>
         <form method="post">
             <h4>LEVERINGSVALG</h4>
-            <input type="radio" id="ekspress" name="levering" value="ekspress" required>
-            <label for="ekspress">Ekspresslevering hjem</label>
-            <p>3-4 Virkedager</p>
-            <p>59 kr <i class="fa-solid fa-truck-fast"></i></p>
-            <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag </p>
-            <input type="radio" id="hentepakke" name="levering" value="hentepakke" required>
-            <label for="hentepakke">Ekspress pakke til utleveringssted</label>
-            <p>1-3 Virkedager</p>
-            <p>59 kr <i class="fa-solid fa-box-archive"></i> <i class="fa-solid fa-wind"></i></p>
-            <input type="radio" id="standard" name="levering" value="standard" required>
-            <label for="standard">Standard hjemmelevering</label>
-            <p>5-8 Virkedager</p>
-            <p>Gratis <i class="fa-solid fa-road-circle-check"></i></p>
-            <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager</p>
+                <section class="ekspress">
+                    <input type="radio" id="ekspress" name="levering" value="ekspress" required>
+                    <label for="ekspress">Ekspresslevering hjem</label>
+                    <p>3-4 Virkedager</p>
+                    <p>59 kr <i class="fa-solid fa-truck-fast"></i></p>
+                    <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag </p>
+                </section>
+                <section clasS="hentepakke">
+                    <input type="radio" id="hentepakke" name="levering" value="hentepakke" required>
+                    <label for="hentepakke">Ekspress pakke til utleveringssted</label>
+                    <p>1-3 Virkedager</p>
+                    <p>59 kr <i class="fa-solid fa-box-archive"></i> <i class="fa-solid fa-wind"></i></p>
+                </section>
+                <section class="standard">
+                    <input type="radio" id="standard" name="levering" value="standard" required>
+                    <label for="standard">Standard hjemmelevering</label>
+                    <p>5-8 Virkedager</p>
+                    <p>Gratis <i class="fa-solid fa-road-circle-check"></i></p>
+                    <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager</p>
+                </section>
         </form>
     </section>
         
-    <section>
+    <section class="betal">
         <h2>4. BETALNING<p>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p></h2> 
         <label for="kortnummer">Kortnummer</label>
         <input type="number" id="kortnummer" placeholder="3423 4793 **** 2093">
@@ -184,16 +190,22 @@
         <input type="text" is="cvc" placeholder="cvc/cvv">
     </section>
 
-    <section>
-        <h3>Personvern</h3>
-        <p>er du enig i at du har lest alt og godkjenner <a href="#" target="blank">Vilkårene?</a></p>
-        <label>
-            <input type="checkbox" required> Ja, jeg godtar vilkårene
-        </label>
-        <label>
-            <input type="checkbox"> Ja takk! send med nyhetsbrev
-        </label>
-    </section>
+
+
+<section class="personsvern">
+    <p>Å betale inkl. mva.</p>
+    <h1>1 199 kr</h1>
+    <button class="fullfør-knapp">Fullfør kjøp</button>
+    <p class="bekreftelse-tekst">
+    Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. 
+    Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger 
+    uriktige eller ufullstendige opplysninger.</p>
+    <label class="nyhetsbrev">
+        <input type="checkbox"> Ja takk! Send nyhetsbrev til meg.</label>
+    <label class="nyhetsbrev">
+        <input type="checkbox"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
+</section>
+
 
 
 

@@ -823,13 +823,113 @@ details .section-title::after {
 
 
 
+/*Relaterte produkter; checkoutside*/
+/* Styling for Relaterte produkter */
+/* Container for slider */
+.lignendeproduktk {
+    overflow-x: auto; /* Horisontal scrolling */
+    white-space: nowrap; /* Alt innhold på én linje */
+    display: flex;
+    padding: 10px;
+    scrollbar-width: none; /* Skjul scrollbar i Firefox */
+}
+
+.lignendeproduktk::-webkit-scrollbar {
+    display: none; /* Skjul scrollbar i Chrome/Safari */
+}
+
+/* Slider styling */
+.produktslider {
+    display: flex; /* Horisontal layout */
+    gap: 20px; /* Mellomrom mellom kort */
+    scroll-snap-type: x mandatory; /* Snapping */
+}
+
+/* Produktkort */
+.lignendeproduktkort {
+    display: flex;
+    flex-direction: column; /* Tekst under bilde */
+    width: 250px; /* Bredde på kortet */
+    border-radius: 20px; /* Runde hjørner */
+    overflow: hidden; /* Skjul alt som stikker ut */
+    background-color: #fff;
+    scroll-snap-align: start; /* Snapping posisjon */
+    text-align: center; /* Sentrer tekst */
+
+    position: relative; /* For å plassere hjerteikonet */
+}
+
+/* Bildestørrelse */
+.lignendeproduktkort img {
+    width: 100%; /* Bildet fyller kortets bredde */
+    height: 200px; /* Fast høyde */
+    object-fit: cover; /* Bildet fyller uten å forvrenge */
+    border-radius: 20px; /* Runde hjørner på bildene */
+}
+
+/* Hjerteikon styling */
+.hjerteikon {
+    position: absolute; /* Plasseres relativt til kortet */
+    top: 10px; /* Avstand fra toppen */
+    right: 10px; /* Avstand fra høyre */
+    font-size: 1.5rem; /* Størrelse på hjerteikonet */
+    color: white; /* Farge på hjertet */
+    background-color: rgba(0, 0, 0, 0.6); /* Gjennomsiktig bakgrunn */
+    padding: 5px; /* Avstand rundt ikonet */
+    border-radius: 50%; /* Gjør bakgrunnen rundt */
+    cursor: pointer; /* Klikkbart ikon */
+}
+
+/* Hover-effekt for hjerteikonet */
+.hjerteikon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Mørkere bakgrunn ved hover */
+    transform: scale(1.1); /* Liten forstørrelse */
+    transition: all 0.3s ease; /* Jevn overgang */
+}
 
 
 
 
+/* Tekst og layout for figcaption */
+.lignendeproduktkort figcaption {
+    display: flex; /* Aktiverer flexbox for innholdet */
+    flex-direction: column; /* Plasserer rating og stjerner under */
+    padding: 10px;
+    font-size: 1rem;
+    text-align: left;
+}
 
+/* Rad for produktnavn og pris */
+.lignendeproduktkort .produktinfo {
+    display: flex; /* Flexbox for å plassere produktnavn og pris på samme linje */
+    justify-content: space-between; /* Produktnavnet til venstre og prisen til høyre */
+    align-items: center; /* Vertikal sentrering */
+    margin-bottom: 10px; /* Litt avstand til ratingen under */
+}
 
+/* Produktnavn styling */
+.lignendeproduktkort h3 {
+    font-size: 1rem;
+    margin: 0; /* Fjern unødvendig margin */
+    color: #333;
+}
 
+/* Pris styling */
+.lignendeproduktkort .pris {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap; /* Hindrer tekstbrudd */
+    margin: 0; /* Fjern unødvendig margin */
+}
+
+/* Rating styling */
+.lignendeproduktkort .rating {
+    display: flex; /* Holder stjernene på samme linje */
+    align-items: center; /* Justerer vertikalt */
+    font-size: 0.8rem;
+    color: #333;
+    margin-top: 5px;
+}
 
 
 

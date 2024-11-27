@@ -493,7 +493,7 @@ figcaption .Farge {
 }
 
 /*Kode for 2.DINE OPPLYSNINGER - checkoutside*/
-section, .kontaktinformasjon {
+.checkoutliste, .pers, .Kontaktinformasjon, .leveres, .betal, .personsvern {
     font-family: Arial, sans-serif;
     padding: 20px;
     font-size: 1.8rem;
@@ -678,21 +678,148 @@ a:hover {
 
 
 
-
-
-
-
-
-
-/*Product.html siden*/
-.litebilde{
-    
-}
-
-.stortbilde{
+/* Container for produktbilder */
+.produkter {
+    display: flex; /* Aktivere flexbox for layout */    
+    flex-direction: row-reverse; /* Plasser små bildene på venstre side */
+    align-items: stretch; /* Juster høydene mellom elementene */
 
 }
 
+/* Stort bilde */
+.stortbilde {
+    flex: 2; /* Gir stort bilde 3 ganger så mye plass */
+    height: auto;
+}
+
+.stortbilde img {
+    width: 100%; /* Bildet fyller containerens bredde */
+    height: 100%; /* Bildet fyller containerens høyde */
+    border: 2px solid #ddd; /* Lys kant rundt bildet */    
+    object-fit: cover; /* Sørger for at bildet ikke forvrenges */
+}
+
+/* Container for små bilder */
+.lite {
+    flex: 1; /* Små bilder tar mindre plass */
+    display: flex;
+    flex-direction: column; /* Plasser bildene vertikalt */
+    gap: 20px; /* Avstand mellom små bildene */
+}
+
+/* Små bilder */
+.litebilde img {
+    width: 100%; /* Bildene fyller bredden av containeren */    
+    border: 2px solid #ddd; /* Lys kant rundt bildene */
+    cursor: pointer; /* Klikkbart bilde */
+    object-fit: cover; /* Sørger for at bildene ikke forvrenges */
+}
+
+.litebilde img:hover {
+    border-color: #333; /* Endrer kantfarge ved hover */
+}
+
+.infoomkjole{
+   margin: 10px;
+   padding: 10px;
+   
+}
+
+/* Styling for select dropdown */
+#størrelse {
+    width: 100%; /* Fyller bredden */
+    padding: 10px; /* Innvendig avstand */
+    border: 1px solid #ddd; /* Lys kant */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 1rem; /* Fontstørrelse */ 
+    color: #333; /* Tekstfarge */
+    margin-bottom: 15px; /* Avstand til neste element */
+    cursor: pointer; /* Markør ved hover */
+    background-color: #f9f9f9; /* Lys grå bakgrunn */
+}
+.addhandlekurven {    
+    background-color: #000; /* Svart bakgrunn */
+    width: 87%; /* Tar mesteparten av bredden */
+    color: #fff; /* Hvit tekst */
+    font-size: 1rem; /* Fontstørrelse */
+    font-weight: bold; /* Fet tekst */
+    cursor: pointer; /* Markør ved hover */
+    margin-right: 10px; /* Avstand til hjertet */
+    padding: 20px; /* Innvendig avstand */
+    border: none; /* Fjerner kant */
+    border-radius: 5px; /* Runde hjørner */
+}
+.submit {
+    width: 60px;    
+    height: 60px;
+}
+.submit i {
+    font-size: 1rem; /* Størrelsen på ikonet */
+    color: #000; /* Svart ikonfarge */
+}
+.submit:hover {
+    background-color: #f0f0f0; /* Lys grå bakgrunn ved hover */
+    border-color: #aaa; /* Mørkere kant ved hover */
+}
+
+/* Container for produktinfo-seksjoner */
+.produkt-informasjonssted {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+/* Styling for hver seksjon */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+/* Styling for pluss og minus */
+details summary::-webkit-details-marker {
+    display: none; /* Fjern standard pil */
+}
+
+details[open] .section-title::after {
+    content: "–"; /* Når åpen, vis minus */
+    font-size: 1.5rem;
+    color: #000;
+}
+
+details .section-title::after {
+    content: "+"; /* Når lukket, vis pluss */
+    font-size: 1.5rem;
+    color: #000;
+    margin-left: 10px;
+}
+
+/* Styling for anmeldelsesseksjonen */
+.reviews {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: gold;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #333;
+}
 
 
 

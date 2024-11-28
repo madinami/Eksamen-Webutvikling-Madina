@@ -8,13 +8,13 @@ html, body{
 }
 
 
-#global-header{
+#global-header {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 100fr auto 100fr; /*denne fiksa det med at bilde ikke gikk opp på sidene*/
-    align-items: center; /*Searchbaren, logo og ikoner flytter på seg*/
+    grid-template-columns: 100fr auto 100fr;
+    align-items: center;
     background-color: rgb(255, 255, 255);
-    padding: 20px; /*kontrollerer hvor stor bakgrunnsfargen skal strekke seg*/  
+    padding: 20px;
 }
 
 #search-form{
@@ -38,7 +38,7 @@ html, body{
     background-color: transparent; 
     position: absolute;
     right: 5px;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     border: 0; /*ringen rundt search er borte*/
     cursor: pointer; /*denne funker*/
@@ -97,7 +97,6 @@ a.logo{
 .handlekurv{
     order: 4;
     display: flex;
-    margin-top: auto;
     gap: 7px;
     color: rgb(0, 0, 0);
 }
@@ -189,39 +188,20 @@ a.logo{
     color:rgb(255, 255, 255)
 }
 
-/* Styling for seksjonen "Populære produkter" */
-.popuPro h3 {
-    text-align: left; /* Sentrer overskriften */
-    font-size: 1.5rem; /* Størrelse på overskriften */
-    margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
-    
-}
-
 /* Styling for hvert produktkort */
-.produkt-kort {
-    display: flex;
-    background: url("/img/women-1838768_640.jpg") center/cover no-repeat;
-    align-items: flex-start; /* Venstrestill innholdet */
-    flex-direction: column; /* Vertikal organisering av bilde og tekst */
-    border: 2px solid black; /* Svart kant rundt kortene */
-    border-radius: 10px; /* Runde hjørner */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
-    max-width: 150px 0px; /* Maks bredde for kortene */
-    height: 350px;   
-}
 
-h4, p {
+
+.produkt-kort, h3, p {
     font-size: 1rem; /* Størrelse på produktnavn */
-    margin: 1px 0; /* Avstand rundt tekst */
     flex-wrap: wrap;
 }
 
-.up { /*denne funker sikkert for footern, for å ikke bruke div*/
+.produkt-kort { /*denne funker sikkert for footern, for å ikke bruke div*/
     display: flex;
     align-items: left;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 10px;
-    padding-bottom: 30px;
+    box-sizing: border-box;
 }
 
 /* Generell styling for hjertet */
@@ -256,21 +236,13 @@ h4, p {
     margin: 20px; /* Luft rundt seksjonen */
 }
 
-.popuKat h3 {
-    text-align: left; /* Sentrer overskriften */
-    font-size: 1.5rem; /* Størrelse på overskriften */
-    margin-bottom: 20px; /* Avstand mellom overskriften og kortene */
-}
 
-.popuKat h3 {
-    text-align: center; /* Sentrer overskriften */
-}
 
-.popuKat p{
+.kat1, .kat2, .kat3, .kat4, .kat5 p{
     padding-bottom: 20px;
 }
 
-.popuKat .kat {
+.popuKat .kat1, .kat2, .kat3, .kat4, .kat5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,21 +253,6 @@ h4, p {
     max-width: 150px 0px; /* Maks bredde for kortene */
     height: 350px;    
     width: 300px;  /*det sto 150 i oppgaveteksten, men vi har ikke fått bra nok instruksjoner på om den skal følges. når A krav videoen viser til 300px i bredden*/
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.popuKat .kategori3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Vertikal organisering av bilde og tekst */
-    border: 2px solid black; /* Svart kant rundt kortene */
-    border-radius: 10px; /* Runde hjørner */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
-    max-width: 150px 0px; /* Maks bredde for kortene */
-    height: 500px;    
-    width: 300px; 
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -669,34 +626,36 @@ a:hover {
     display: block; /* Hver label på egen linje */
     margin: 10px 0;
     text-align: left; /* Venstrejustering */
+    
 }
 
 .nyhetsbrev input {
     margin-right: 10px; /* Avstand mellom checkbox og tekst */
 }
 
-
-
-
 /* Container for produktbilder */
 .produkter {
     display: flex; /* Aktivere flexbox for layout */    
     flex-direction: row-reverse; /* Plasser små bildene på venstre side */
     align-items: stretch; /* Juster høydene mellom elementene */
-
 }
 
 /* Stort bilde */
 .stortbilde {
-    flex: 2; /* Gir stort bilde 3 ganger så mye plass */
+    flex: 4; /* Gir stort bilde 3 ganger så mye plass */
     height: auto;
+    flex-basis: min-content;
 }
 
 .stortbilde img {
     width: 100%; /* Bildet fyller containerens bredde */
     height: 100%; /* Bildet fyller containerens høyde */
-    border: 2px solid #ddd; /* Lys kant rundt bildet */    
-    object-fit: cover; /* Sørger for at bildet ikke forvrenges */
+    border: 2px solid #ddd; /* Lys kant rundt bildet */   
+}
+
+
+.stortbilde img:hover {
+    border-color: #333; /* Endrer kantfarge ved hover */
 }
 
 /* Container for små bilder */
@@ -705,7 +664,10 @@ a:hover {
     display: flex;
     flex-direction: column; /* Plasser bildene vertikalt */
     gap: 20px; /* Avstand mellom små bildene */
+    min-height: auto;
+    flex-basis: min-content;
 }
+
 
 /* Små bilder */
 .litebilde img {
@@ -713,11 +675,16 @@ a:hover {
     border: 2px solid #ddd; /* Lys kant rundt bildene */
     cursor: pointer; /* Klikkbart bilde */
     object-fit: cover; /* Sørger for at bildene ikke forvrenges */
+    
 }
 
 .litebilde img:hover {
     border-color: #333; /* Endrer kantfarge ved hover */
 }
+
+
+
+
 
 .infoomkjole{
    margin: 10px;
@@ -781,6 +748,7 @@ a:hover {
     cursor: pointer;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
+
 }
 
 
@@ -992,21 +960,296 @@ footer p {
     font-size: 14px;
 }
 
-/* Responsiv design */
-@media (max-width: 768px) {
-    footer .footer-content {
-        flex-direction: row; /* Holder seksjonene ved siden av hverandre på mobil også */
+footer .footer-content {
+    flex-direction: row; /* Holder seksjonene ved siden av hverandre på mobil også */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+footer .footer-content section {
+    flex: 1;
+    min-width: 150px; /* Mindre bredde for små skjermer */
+}    
+
+
+
+
+    
+
+/* Desktop */
+@media (min-width: 1200px) {
+    
+    /* Header */
+    #global-header { 
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 15px;
+        grid-template-columns: none;
+        align-items: center;
+        padding: 20px 40px;
     }
 
-    footer .footer-content section {
+    #search-form input {
+        width: 300px; /* Bredere søkefelt på desktop */
+    }
+
+    .menypunkter, .menypunkterb {
+        gap: 90px; /* Mer mellomrom mellom meny-elementene */
+        flex-direction: row;
+    }
+
+    /* Banner */
+
+
+    .banner h3 {
+        font-size: 2.5rem; /* Større overskrift */
+    }
+
+    /* Mest populære produkter */
+    .popuPro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Grid for tre produkter i én rad */
+        gap: 20px;
+    }
+
+    /* Populære kategorier */
+    .popuKat {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* To kolonner for større kategoribokser */
+        gap: 20px;
+    }
+
+    .kat {
+        height: 200px;
+    }
+
+    .kategori3 {
+        grid-column: span 2; /* Tar to kolonner */
+        height: 400px; /* Ekstra høyde */
+    }
+
+    /* Anmeldelser */
+    .anmeldelseskort {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        overflow: hidden; /* Fjern scroll for desktop */
+    }
+
+    /* Footer */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    .kontakt-footer, .snarvei-footer, .sosialemedier-footer {
+        width: 30%; /* Del plassen likt */
+    }
+
+
+
+
+    .produkt-kort {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+        grid-template-rows: repeat(2, auto); /* 2 rader */
+        gap: 20px; /* Mellomrom mellom kort */
+        justify-content: center; /* Sentrer grid på siden */
+        padding: 20px; /* Luft rundt hele seksjonen */
+    }
+
+    .lignendeproduktkort {
+        background-color: #fff;
+        border-radius: 10px; /* Runde hjørner */
+        overflow: hidden; /* Skjul alt som stikker ut */
+        text-align: center; /* Sentrer innholdet */
+        padding: 10px;
+    }
+
+
+
+    .hjerteikon {
+        position: absolute; /* Plasseres over bildet */
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.7); /* Gjennomsiktig bakgrunn */
+        padding: 5px;
+        border-radius: 50%; /* Runde kanter */
+        cursor: pointer;
+    }
+
+    .produktinfo {
+        display: flex;
+        justify-content: space-between; /* Produktnavn til venstre, pris til høyre */
+        margin-top: 10px;
+    }
+
+    .produktinfo h3 {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .produktinfo .pris {
+        font-size: 1rem;
+        color: #555;
+        white-space: nowrap; /* Hindrer linjeskift */
+    }
+
+    .rating {
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .anmldelser {
+        text-align: center;
+        padding: 20px;
+        overflow: hidden; /* Skjul innhold utenfor containeren */
+    }
+    
+    .anmldelser h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .anmeldelseskort {
+        display: flex; /* Plasser artikler horisontalt */
+        gap: 20px; /* Avstand mellom kortene */
+        overflow-x: auto; /* Aktiver horisontal scrolling */
+        scroll-snap-type: x mandatory; /* Scroll Snap for horisontal scrolling */
+        padding: 10px;
+        scrollbar-width: none; /* Skjuler scrollbar for Firefox */
+    }
+    
+    .anmeldelseskort::-webkit-scrollbar {
+        display: none; /* Skjuler scrollbar for Chrome, Safari */
+    }
+    
+    .popuKat {
+        align-items: flex-start;
+        display: grid;
+        grid-template-areas: 
+            "kat1 kat2 kat3"
+            "kat4 kat4 kat5";
+        gap: 0px; /* Mellomrom mellom artiklene */
+        margin: 30px; /* Luft rundt seksjonen */
+        
+    }
+    
+
+    .k {
+        text-align: center;
+        margin: 20px;
+
+    }
+    
+    .k h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    
+    .k p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #555;
+    }
+    
+    /* Styling for individuelle kategorier */
+    .kat1, .kat2, .kat3, .kat4, .kat5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px; /* Runde hjørner */
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #fff; /* Hvit tekst */
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lett skygge */
+
+    }
+    
+    /* Eksempelbakgrunn for kategorier */
+    .kat1 {
+        grid-area: kat1;
+        background-color: #1abc9c; /* Bytt ut med bilde */
+        height: 200px;
+        
+    }
+    
+    .kat2 {
+        grid-area: kat2;
+        background-color: #3498db; /* Bytt ut med bilde */
+    }
+    
+    .kat3 {
+        grid-area: kat3;
+        background-color: #e74c3c; /* Bytt ut med bilde */
+        height: 500px;
+        grid-column: span 1; 
+    }
+    
+    .kat4 {
+        grid-area: kat4;
+        background-color: #9b59b6; /* Bytt ut med bilde */
+        width: 700px;
+        
+
+    }
+    
+    .kat5 {
+        
+        grid-area: kat5;
+        background-color: #f39c12; /* Bytt ut med bilde */
+        height: 200px;
+    }
+    
+
+
+
+
+    footer .kontakt-footer, .snarvei-footer, .sosialemedier-footer{
+        justify-content: space-between;
+    }
+
+    footer .footer-content {
         flex: 1;
         min-width: 150px; /* Mindre bredde for små skjermer */
-    }
+        padding: 0px;
+    }    
 
+
+
+     
+    
+
+
+    
+
+
+
+    
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

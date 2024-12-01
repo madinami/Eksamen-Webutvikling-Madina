@@ -1,10 +1,11 @@
 
 
 
-html, body{
+body{
+    background-color: #00aced;
     font-family:Arial, Helvetica, sans-serif;
-    margin: 20px;
     background-color: rgb(255, 255, 255);
+    justify-items: center;
 }
 
 
@@ -14,6 +15,7 @@ html, body{
     align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 20px;
+    width: 100%;
 }
 
 #search-form{
@@ -166,12 +168,10 @@ a.logo{
 
 .mestPopu h1{
     font-size: 30px;
-    margin: 20px;
     padding-bottom: 20px;
 }
 
 .filter-btn{
-    margin: 5px;
     padding: 10px 25px;
     border: 1px solid black;
     border-radius: 30px; 
@@ -193,6 +193,7 @@ a.logo{
 
 .produkt-kort, h3, p {
     flex-wrap: wrap;
+    
 }
 
 .produkt-kort { /*denne funker sikkert for footern, for å ikke bruke div*/
@@ -201,33 +202,34 @@ a.logo{
     justify-content: center;
     padding-top: 10px;
     box-sizing: border-box;
-    margin: 20px;
 }
 
+
+
+
 .hjerte {
-    position: absolute; /* Plasseres relativt til .produkt-kort */
-    right: 30px; /* Avstand fra høyre */
-    color: red; /* Fargen på hjertet */
-    font-size: 1.5rem; /* Størrelse på ikonet */
-    background-color: white; /* Bakgrunn for kontrast */
-    border-radius: 50%; /* Runde hjørner for bakgrunnen */
-    padding: 4px; /* Avstand rundt ikonet */
-    cursor: pointer; /* Gir håndpekeren ved hover */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lett skygge */
+    position: absolute; 
+    right: 30px; 
+    color: red; 
+    font-size: 1.5rem; 
+    background-color: white; 
+    border-radius: 50%; 
+    padding: 4px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 /* Hover-effekt */
 .fa-heart:hover {
-    color: darkred; /* Endrer hjertets farge ved hover */
-    transform: scale(1.2); /* Gjør ikonet litt større ved hover */
-    transition: all 0.5s ease; /* Jevn overgang for endringer */
+    color: darkred; 
+    transform: scale(1.2); 
+    transition: all 0.5s ease; 
 }
 
 
 
 
 /*våre mest populære kategorier*/
-
 .k {
     display: flex; 
     justify-content: center; 
@@ -242,25 +244,20 @@ a.logo{
     justify-content: center; 
     align-items: center; 
     gap: 10px; 
-    margin: 10px; 
+    margin-top: 10px; 
 }
 
 
-
-
-.kat1, .kat2, .kat3, .kat4, .kat5 p{
-    padding-bottom: 20px;
-}
 
 .popuKat .kat1, .kat2, .kat3, .kat4, .kat5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Vertikal organisering av bilde og tekst */
-    border: 2px solid black; /* Svart kant rundt kortene */
-    border-radius: 10px; /* Runde hjørner */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtil skygge */
-    max-width: 150px 0px; /* Maks bredde for kortene */
+    flex-direction: column; 
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 150px 0px; 
     height: 350px;    
     width: 300px;  /*det sto 150 i oppgaveteksten, men vi har ikke fått bra nok instruksjoner på om den skal følges. når A krav videoen viser til 300px i bredden*/
     padding: 10px;
@@ -271,10 +268,11 @@ a.logo{
 
 
 
-/*annmeldelses kortene*/
 .anmldelser {
     text-align: center;
-    overflow: hidden; /* Skjul innhold utenfor containeren */
+    max-width: 100%;
+    overflow-x: auto; 
+    overflow: hidden;
 }
 
 .anmldelser h2 {
@@ -287,22 +285,20 @@ a.logo{
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
     margin: 10px;
+    overflow: hidden; 
 }
 .anmeldelseskort::-webkit-scrollbar {
-    display: none; /* Skjuler scrollebar som standard (WebKit) */
-    transition: all 4s ease; /* Jevn overgang for endringer */
+    display: none; 
+    transition: all 4s ease; 
   }
 
   .anmeldelseskort:hover {
     scrollbar-width: thin; 
     color: rgb(85, 11, 11);
-    transform: scale(1.01); /* Gjør ikonet litt større ved hover */
-    transition: all 0.5s ease; /* Jevn overgang for endringer */
+    transform: scale(1.01); 
+    transition: all 0.5s ease; 
   }
     
-
-
-
 .anmeldelseskort article {
     flex: 0 0 200px; 
     background-color: #f9f9f9;
@@ -310,20 +306,18 @@ a.logo{
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: star; 
+    scroll-snap-align: start; 
     text-align: left;
 }
-
-
 .anmeldelseskort article img {
-    width: 80px; /* Bredde på bildet */
-    height: 80px; /* Høyde på bildet */
-    border-radius: 50%; /* Gjør bildet rundt */
-    object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge det */
-    border: 2px solid #ddd; /* Legger til en kantlinje */   
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #ddd; 
 }
 
-/* Tekst i kortene */
+
 .anmeldelseskort article h5 {
     font-size: 0.9rem;
     margin-bottom: 3px;
@@ -339,17 +333,17 @@ a.logo{
 
 
 
-/*Checkout handlekurven*/
+
 main {
     padding: 10px;
     font-family: Arial, sans-serif;
 }
 
-/* Styling for checkout list */
+
 .checkoutliste {
     display: flex;
-    flex-direction: column;/*får den til å gå nedover*/
-    gap: 10px; /* Avstand mellom produktene */
+    flex-direction: column;
+    gap: 10px; 
 }
 
 /* Overskrift styling */
@@ -359,86 +353,84 @@ main {
     padding-left: 40px;
 }
 
-/* Bilde styling */
+
 .checkoutbilde {
     width: 150px;
     height: auto;
-    object-fit: cover; /* Sørg for at bildet fyller boksen proporsjonalt */
+    object-fit: cover; 
 }
 
-/* Figcaption styling */
+
 figcaption {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1; /* Fyller tilgjengelig plass */
+    flex: 1; 
 }
 
-/* Produktnavn styling */
+
 figcaption h3 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* Pris styling */
+
 figcaption .pris {
     font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
 }
 
-/* Farge styling */
+
 figcaption .Farge {
     font-size: 1 rem;
     color: #666;
     margin-bottom: 10px;
 }
 
-/* Kontrollseksjon for størrelse og antall */
-/* Styling for størrelse og antall-seksjonen */
+
 .str {
     display: flex;
-    gap: 10px; /* Avstand mellom størrelse og antall */
-    align-items: center; /* Juster vertikalt */
-    margin-top: 10px; /* Avstand over seksjonen */
+    gap: 10px;
+    align-items: center; 
+    margin-top: 10px; 
 }
 
-/* Styling for etiketter */
+
 .str label {
     font-size: 0.9rem;
     color: #333;
 }
 
-/* Styling for dropdown og input-feltene */
+
 .str select, .str input {
-    padding: 5px; /* Innvendig avstand */
-    border: 1px solid #ddd; /* Lys grå kant */
-    border-radius: 5px; /* Runde hjørner */
-    font-size: 0.9rem; /* Tekststørrelse */
-    width: 60px; /* Bredde */
-    cursor: pointer; /* Klikkbar markør */
+    padding: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 0.9rem; 
+    width: 60px; 
+    cursor: pointer; 
 }
 
-/* Styling for dropdown (Størrelse-feltet) */
+
 .str select {
-    background-color: rgb(209, 209, 209); /* Lys grå bakgrunn */
+    background-color: rgb(209, 209, 209); 
 }
 
-/* Styling for antall-input (Sørger for at pilene vises konstant) */
 .str input[type="number"] {
-    -moz-appearance: textfield; /* For Firefox */
-    -webkit-appearance: number-input; /* For Chrome og Safari */
-    appearance: number-input; /* Sørger for at pilene vises i moderne nettlesere */
-    text-align: center; /* Sentraliser tekst og tall */
+    -moz-appearance: textfield; 
+    -webkit-appearance: number-input; 
+    appearance: number-input; 
+    text-align: center;
 }
 
-/* Justering av opp- og ned-piler */
+
 .str input[type="number"]::-webkit-inner-spin-button,
 .str input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: inner-spin-button; /* Sørger for synlige piler */
-    opacity: 1; /* Gjør pilene alltid synlige */
-    margin: 0; /* Fjern margin */
+    -webkit-appearance: inner-spin-button; 
+    opacity: 1;
+    margin: 0;
 }
 
 .str input[type="number"]::-moz-inner-spin-button {
@@ -919,20 +911,24 @@ footer {
     flex-direction: column;
     background-color: #333;
     color: white;
-    padding: 10px;
     box-sizing: border-box;
-    margin: 20px;
 }
 
 
 footer .logo-footer {
+    background-color: #1de469;
     margin-bottom: 20px;
+    
+}
+
+footer{
+    margin: ;
 }
 
 
 
 footer .sosialemedier-footer a {
-    margin: 0 10px;
+    margin: 10px;
     color: white;
 }
 footer .sosialemedier-footer a i {
@@ -947,7 +943,7 @@ footer h4 {
     font-size: 16px;
 }
 footer p {
-    margin: 5px 0;
+    margin: 5px;
     font-size: 14px;
 }
 .kontakt-footer, .snarvei-footer {
@@ -981,6 +977,10 @@ footer p {
         flex-direction: row;
     }
 
+    body{
+        margin: 40px;
+    }
+
 
 
 
@@ -994,6 +994,7 @@ footer p {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         gap: 20px;
+        
     }
 
 
@@ -1019,6 +1020,8 @@ footer p {
         justify-content: space-between;
         padding: 40px;
     }
+
+    
 
     .kontakt-footer, .snarvei-footer, .sosialemedier-footer {
         width: 15%; 
@@ -1059,6 +1062,7 @@ footer p {
         text-align: center;
         padding: 20px;
         overflow: hidden; 
+        
     }
     
     .anmldelser h2 {
@@ -1073,39 +1077,44 @@ footer p {
         scroll-snap-type: x mandatory; 
         padding: 10px;
         scrollbar-width: none; 
+        
     }
     
     .anmeldelseskort::-webkit-scrollbar {
         display: none; 
     }
+
+
+
+
+    .produkt-kort{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        justify-items: center;
+    }
+
+
     
     .popuKat {
         align-items: flex-start;
-        display: grid;
         grid-template-areas: 
             "kat1 kat2 kat3"
             "kat4 kat4 kat5";
-        gap: 0px; 
-        margin: 30px; 
         
     }
     
 
     .k {
         text-align: center;
-        margin: 20px;
-
     }
     
     .k h3 {
         font-size: 1.8rem;
-        margin-bottom: 10px;
         justify-content: center;
     }
     
     .k p {
         font-size: 1rem;
-        margin-bottom: 20px;
         color: #555;
     }
     
@@ -1122,14 +1131,11 @@ footer p {
         background-size: cover;
         background-position: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
     }
     
     .kat1 {
         grid-area: kat1;
-        background-color: #1abc9c; /* Bytt ut med bilde */
-        height: 200px;
-        
+        background-color: #1abc9c; /* Bytt ut med bilde */        
     }
     
     .kat2 {
@@ -1141,23 +1147,27 @@ footer p {
         grid-area: kat3;
         background-color: #e74c3c; /* Bytt ut med bilde */
         height: 500px;
-        grid-column: span 1; 
+        grid-row-end: none;
+        
     }
     
     .kat4 {
         grid-area: kat4;
         background-color: #9b59b6; /* Bytt ut med bilde */
         width: 700px;
-        
-
+        grid-column: span 2; 
     }
     
     .kat5 {
-        
         grid-area: kat5;
         background-color: #f39c12; /* Bytt ut med bilde */
         height: 200px;
+        align-self: self-end;
     }
+
+    
+
+
 
     
     .altproduktinfo {
@@ -1289,9 +1299,9 @@ footer p {
 
     
 
-    footer .footer-content {
-        min-width: 150px; 
-        padding: 0px;
+    footer {
+        background-color: #00aced;
+        width: 100%; 
     }    
 
 

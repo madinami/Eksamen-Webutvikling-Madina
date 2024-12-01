@@ -3,7 +3,7 @@
 
 html, body{
     font-family:Arial, Helvetica, sans-serif;
-    padding: 0; 
+    margin: 20px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -11,7 +11,6 @@ html, body{
 #global-header {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 100fr auto 100fr;
     align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 20px;
@@ -80,7 +79,7 @@ a.logo{
     order: 1;
     text-decoration: none; /*fjerner understrekning av lenker*/
     color: black;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-bottom: 2px;
 }
 
@@ -90,11 +89,12 @@ a.logo{
 
 .menypunkterb{
     order: 2;
-    padding-bottom: 15px;
+
 }
 
 
 .handlekurv{
+    margin-top: 10px;
     order: 4;
     display: flex;
     gap: 7px;
@@ -188,23 +188,22 @@ a.logo{
     color:rgb(255, 255, 255)
 }
 
-/* Styling for hvert produktkort */
+
 
 
 .produkt-kort, h3, p {
-    font-size: 1rem; /* Størrelse på produktnavn */
     flex-wrap: wrap;
 }
 
 .produkt-kort { /*denne funker sikkert for footern, for å ikke bruke div*/
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     padding-top: 10px;
     box-sizing: border-box;
+    margin: 20px;
 }
 
-/* Generell styling for hjertet */
 .hjerte {
     position: absolute; /* Plasseres relativt til .produkt-kort */
     right: 30px; /* Avstand fra høyre */
@@ -228,13 +227,24 @@ a.logo{
 
 
 /*våre mest populære kategorier*/
-.popuKat {
-    display: flex; /* Flexbox for organisering */
-    align-items: center;
-    flex-direction: column; /* Plasserer artiklene under hverandre */
-    gap: 10px; /* Avstand mellom kortene */
-    margin: 20px; /* Luft rundt seksjonen */
+
+.k {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; 
 }
+
+.popuKat {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 10px; 
+}
+
 
 
 
@@ -264,43 +274,47 @@ a.logo{
 /*annmeldelses kortene*/
 .anmldelser {
     text-align: center;
-    padding: 20px;
     overflow: hidden; /* Skjul innhold utenfor containeren */
 }
 
 .anmldelser h2 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
 }
 
 .anmeldelseskort {
-    display: flex; /* Plasser artikler horisontalt */
-    gap: 20px; /* Avstand mellom kortene */
-    overflow-x: auto; /* Aktiver horisontal scrolling */
-    scroll-snap-type: x mandatory; /* Scroll Snap for horisontal scrolling */
-    padding: 10px;
-    scrollbar-width: none; /* Skjuler scrollbar for Firefox */
+    display: flex; 
+    gap: 20px; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    margin: 10px;
 }
-
 .anmeldelseskort::-webkit-scrollbar {
-    display: none; /* Skjuler scrollbar for Chrome, Safari */
-}
+    display: none; /* Skjuler scrollebar som standard (WebKit) */
+    transition: all 4s ease; /* Jevn overgang for endringer */
+  }
+
+  .anmeldelseskort:hover {
+    scrollbar-width: thin; 
+    color: rgb(85, 11, 11);
+    transform: scale(1.01); /* Gjør ikonet litt større ved hover */
+    transition: all 0.5s ease; /* Jevn overgang for endringer */
+  }
+    
 
 
 
-/* Styling for hvert kort */
 .anmeldelseskort article {
-    flex: 0 0 200px; /* Hver artikkel har fast bredde */
+    flex: 0 0 200px; 
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid #e7bfbf;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: star; /* Snap til start av hver artikkel */
+    scroll-snap-align: star; 
     text-align: left;
 }
 
-/* Bilde styling */
+
 .anmeldelseskort article img {
     width: 80px; /* Bredde på bildet */
     height: 80px; /* Høyde på bildet */
@@ -313,6 +327,7 @@ a.logo{
 .anmeldelseskort article h5 {
     font-size: 0.9rem;
     margin-bottom: 3px;
+    
 }
 
 .anmeldelseskort article p {
@@ -603,7 +618,7 @@ a:hover {
     font-size: 1rem;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Runde hjørner */
+    border-radius: 5px; /* Runde 
     cursor: pointer;
     margin: 15px 0;
     width: 100%; /* Full bredde */
@@ -642,14 +657,11 @@ a:hover {
 
 /* Stort bilde */
 .stortbilde {
-    flex: 4; /* Gir stort bilde 3 ganger så mye plass */
-    height: auto;
-    flex-basis: min-content;
+    flex: 2 1 0%;
+    border-radius: 5px;
 }
 
 .stortbilde img {
-    width: 100%; /* Bildet fyller containerens bredde */
-    height: 100%; /* Bildet fyller containerens høyde */
     border: 2px solid #ddd; /* Lys kant rundt bildet */   
 }
 
@@ -660,12 +672,10 @@ a:hover {
 
 /* Container for små bilder */
 .lite {
-    flex: 1; /* Små bilder tar mindre plass */
     display: flex;
-    flex-direction: column; /* Plasser bildene vertikalt */
-    gap: 20px; /* Avstand mellom små bildene */
-    min-height: auto;
-    flex-basis: min-content;
+    flex-direction: column;
+    flex: 1 1 0%;
+    gap: 10px;
 }
 
 
@@ -827,73 +837,73 @@ details .section-title::after {
     position: relative; /* For å plassere hjerteikonet */
 }
 
-/* Bildestørrelse */
+
 .lignendeproduktkort img {
-    width: 100%; /* Bildet fyller kortets bredde */
-    height: 200px; /* Fast høyde */
-    object-fit: cover; /* Bildet fyller uten å forvrenge */
-    border-radius: 20px; /* Runde hjørner på bildene */
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 20px; 
 }
 
-/* Hjerteikon styling */
+
 .hjerteikon {
-    position: absolute; /* Plasseres relativt til kortet */
-    top: 10px; /* Avstand fra toppen */
-    right: 10px; /* Avstand fra høyre */
-    font-size: 1.5rem; /* Størrelse på hjerteikonet */
-    color: white; /* Farge på hjertet */
-    background-color: rgba(0, 0, 0, 0.6); /* Gjennomsiktig bakgrunn */
-    padding: 5px; /* Avstand rundt ikonet */
-    border-radius: 50%; /* Gjør bakgrunnen rundt */
-    cursor: pointer; /* Klikkbart ikon */
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 5px;
+    border-radius: 50%; 
+    cursor: pointer; 
 }
 
-/* Hover-effekt for hjerteikonet */
+
 .hjerteikon:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Mørkere bakgrunn ved hover */
-    transform: scale(1.1); /* Liten forstørrelse */
-    transition: all 0.3s ease; /* Jevn overgang */
+    background-color: rgba(0, 0, 0, 0.8); 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
 }
 
 
 
 
-/* Tekst og layout for figcaption */
+
 .lignendeproduktkort figcaption {
-    display: flex; /* Aktiverer flexbox for innholdet */
-    flex-direction: column; /* Plasserer rating og stjerner under */
+    display: flex; 
+    flex-direction: column; 
     padding: 10px;
     font-size: 1rem;
     text-align: left;
 }
 
-/* Rad for produktnavn og pris */
+
 .lignendeproduktkort .produktinfo {
-    display: flex; /* Flexbox for å plassere produktnavn og pris på samme linje */
-    justify-content: space-between; /* Produktnavnet til venstre og prisen til høyre */
-    align-items: center; /* Vertikal sentrering */
-    margin-bottom: 10px; /* Litt avstand til ratingen under */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
 }
 
-/* Produktnavn styling */
+
 .lignendeproduktkort h3 {
     font-size: 1rem;
-    margin: 0; /* Fjern unødvendig margin */
+    margin: 0; 
     color: #333;
 }
 
-/* Pris styling */
+
 .lignendeproduktkort .pris {
     font-size: 0.9rem;
     color: #555;
-    white-space: nowrap; /* Hindrer tekstbrudd */
-    margin: 0; /* Fjern unødvendig margin */
+    white-space: nowrap; 
+    margin: 0; 
 }
 
-/* Rating styling */
+
 .lignendeproduktkort .rating {
-    display: flex; /* Holder stjernene på samme linje */
-    align-items: center; /* Justerer vertikalt */
+    display: flex; 
+    align-items: center; 
     font-size: 0.8rem;
     color: #333;
     margin-top: 5px;
@@ -904,119 +914,92 @@ details .section-title::after {
 
 /* Footer */
 footer {
+    border-top: double;
     display: flex;
     flex-direction: column;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    margin: 20px;
 }
 
-footer .footer-content {
-    display: flex;
-    flex-direction: row; /* Tvinger seksjonene til å stå på samme linje */
-    justify-content: space-between; /* Plasserer dem jevnt over hele linjen */
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: nowrap; /* Forhindrer at de brytes til en ny linje */
-}
-
-footer .footer-content section {
-    flex: 1;
-    min-width: 200px; /* Minimum bredde for hver seksjon */
-}
 
 footer .logo-footer {
-    text-align: left;
     margin-bottom: 20px;
 }
 
-footer .sosialemedier-footer {
-    margin-top: 20px;
-}
+
 
 footer .sosialemedier-footer a {
-    text-decoration: none;
     margin: 0 10px;
     color: white;
 }
-
 footer .sosialemedier-footer a i {
     font-size: 15px;
     transition: color 1.3s ease;
 }
-
 footer .sosialemedier-footer a:hover i {
     color: #00aced;
 }
-
 footer h4 {
     margin-bottom: 10px;
     font-size: 16px;
 }
-
 footer p {
     margin: 5px 0;
     font-size: 14px;
 }
-
-footer .footer-content {
-    flex-direction: row; /* Holder seksjonene ved siden av hverandre på mobil også */
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 15px;
+.kontakt-footer, .snarvei-footer {
+    box-sizing: border-box;
+    padding: 10px; 
+    width: calc(50% - 10px); 
+    display: inline-block; 
+    vertical-align: top; 
 }
 
-footer .footer-content section {
-    flex: 1;
-    min-width: 150px; /* Mindre bredde for små skjermer */
-}    
+
 
 
 
 
     
 
-/* Desktop */
+
 @media (min-width: 1200px) {
-    
-    /* Header */
+
     #global-header { 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        grid-template-columns: none;
-        align-items: center;
-        padding: 20px 40px;
     }
 
-    #search-form input {
-        width: 300px; /* Bredere søkefelt på desktop */
-    }
 
     .menypunkter, .menypunkterb {
-        gap: 90px; /* Mer mellomrom mellom meny-elementene */
+        left: 50px;
+        gap: 50px; 
         flex-direction: row;
     }
 
-    /* Banner */
+
+
 
 
     .banner h3 {
-        font-size: 2.5rem; /* Større overskrift */
+        font-size: 2.5rem; 
     }
 
-    /* Mest populære produkter */
+  
     .popuPro {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Grid for tre produkter i én rad */
+        grid-template-columns: repeat(3, 1fr); 
         gap: 20px;
     }
 
-    /* Populære kategorier */
+
     .popuKat {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* To kolonner for større kategoribokser */
+        grid-template-columns: 1fr 1fr; 
         gap: 20px;
     }
 
@@ -1025,19 +1008,12 @@ footer .footer-content section {
     }
 
     .kategori3 {
-        grid-column: span 2; /* Tar to kolonner */
-        height: 400px; /* Ekstra høyde */
+        grid-column: span 2; 
+        height: 400px;
     }
 
-    /* Anmeldelser */
-    .anmeldelseskort {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        overflow: hidden; /* Fjern scroll for desktop */
-    }
 
-    /* Footer */
+
     .footer-content {
         display: flex;
         justify-content: space-between;
@@ -1045,74 +1021,44 @@ footer .footer-content section {
     }
 
     .kontakt-footer, .snarvei-footer, .sosialemedier-footer {
-        width: 30%; /* Del plassen likt */
+        width: 15%; 
     }
 
 
 
-
-    .produkt-kort {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-        grid-template-rows: repeat(2, auto); /* 2 rader */
-        gap: 20px; /* Mellomrom mellom kort */
-        justify-content: center; /* Sentrer grid på siden */
-        padding: 20px; /* Luft rundt hele seksjonen */
-    }
-
+    /*Våre mest populære produkter ; disse funker*/
     .lignendeproduktkort {
         background-color: #fff;
-        border-radius: 10px; /* Runde hjørner */
-        overflow: hidden; /* Skjul alt som stikker ut */
-        text-align: center; /* Sentrer innholdet */
+        border-radius: 10px; 
+        overflow: hidden; 
+        text-align: center;
         padding: 10px;
     }
-
-
-
-    .hjerteikon {
-        position: absolute; /* Plasseres over bildet */
-        top: 10px;
-        right: 10px;
-        font-size: 1.5rem;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.7); /* Gjennomsiktig bakgrunn */
-        padding: 5px;
-        border-radius: 50%; /* Runde kanter */
-        cursor: pointer;
-    }
-
     .produktinfo {
         display: flex;
-        justify-content: space-between; /* Produktnavn til venstre, pris til høyre */
         margin-top: 10px;
     }
-
-    .produktinfo h3 {
-        font-size: 1rem;
-        color: #333;
-    }
-
     .produktinfo .pris {
         font-size: 1rem;
-        color: #555;
-        white-space: nowrap; /* Hindrer linjeskift */
+    }
+    .rating {
+        justify-content: center;
+    }
+    .hjerteikon {
+        margin: 10px;
+    }
+    .kontakt-footer{
+        white-space: nowrap;
     }
 
-    .rating {
-        margin-top: 5px;
-        font-size: 0.9rem;
-        color: #555;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
+
 
 
     .anmldelser {
         text-align: center;
         padding: 20px;
-        overflow: hidden; /* Skjul innhold utenfor containeren */
+        overflow: hidden; 
     }
     
     .anmldelser h2 {
@@ -1121,16 +1067,16 @@ footer .footer-content section {
     }
     
     .anmeldelseskort {
-        display: flex; /* Plasser artikler horisontalt */
-        gap: 20px; /* Avstand mellom kortene */
-        overflow-x: auto; /* Aktiver horisontal scrolling */
-        scroll-snap-type: x mandatory; /* Scroll Snap for horisontal scrolling */
+        display: flex; 
+        gap: 20px; 
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory; 
         padding: 10px;
-        scrollbar-width: none; /* Skjuler scrollbar for Firefox */
+        scrollbar-width: none; 
     }
     
     .anmeldelseskort::-webkit-scrollbar {
-        display: none; /* Skjuler scrollbar for Chrome, Safari */
+        display: none; 
     }
     
     .popuKat {
@@ -1139,8 +1085,8 @@ footer .footer-content section {
         grid-template-areas: 
             "kat1 kat2 kat3"
             "kat4 kat4 kat5";
-        gap: 0px; /* Mellomrom mellom artiklene */
-        margin: 30px; /* Luft rundt seksjonen */
+        gap: 0px; 
+        margin: 30px; 
         
     }
     
@@ -1163,23 +1109,22 @@ footer .footer-content section {
         color: #555;
     }
     
-    /* Styling for individuelle kategorier */
+ 
     .kat1, .kat2, .kat3, .kat4, .kat5 {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 10px; /* Runde hjørner */
+        border-radius: 10px; 
         font-weight: bold;
         font-size: 1.2rem;
-        color: #fff; /* Hvit tekst */
+        color: #fff; 
         text-align: center;
         background-size: cover;
         background-position: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lett skygge */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     }
     
-    /* Eksempelbakgrunn for kategorier */
     .kat1 {
         grid-area: kat1;
         background-color: #1abc9c; /* Bytt ut med bilde */
@@ -1213,18 +1158,139 @@ footer .footer-content section {
         background-color: #f39c12; /* Bytt ut med bilde */
         height: 200px;
     }
+
+    
+    .altproduktinfo {
+        padding: 20px; 
+        margin: 15px;
+        display: flex; 
+        gap: 20px;
+        align-items: stretch;
+        justify-content: center; 
+    }
+    
+    .produkter {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+        padding: 40px;
+    }
+    
+    .infoomkjole, .produkt-informasjonssted, .altproduktinformasjon {
+        display: flex;
+        flex: 100%; 
+        flex-direction: column; 
+    }
+
+    .altproduktinformasjon {
+        overflow-y: auto;
+        box-sizing: border-box; 
+        max-height: 700px; 
+    }
+
+    .infoomkjole, .produkt-informasjonssted {
+        margin-bottom: 80px; 
+    }
+
+    .produktslider .h1{
+        background-color: #00aced;
+    }
+    
+
+    
+    .scrollable {
+        overflow-y: auto; 
+        max-height: 400px; 
+        scrollbar-color: #00aced #f0f0f0; 
+        scrollbar-width: thin; 
+    }
+    
+    .scrollable::-webkit-scrollbar-thumb {
+        border-radius: 5px; 
+        background: #00aced; 
+    }
+    
+    .scrollable::-webkit-scrollbar-track {
+        background: #f0f0f0;
+    }
+
+    .lignendeproduktk {
+        overflow-x: auto;
+        padding: 20px; 
+        
+    }
+    
+    .lignendeproduktkort { 
+        background-color: #fff;
+        border-radius: 10px; 
+        flex: 0 0 auto; 
+        height: auto; 
+       
+    }
+
+    .ch{
+        margin: 80px;
+    }
+
+    .opplysninger {
+        width: 100%; 
+        display: flex;
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .Kontaktinformasjon h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .Kontaktinformasjon label {
+        display: block; 
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: #333;
+    }
+    
+    .Kontaktinformasjon input[type="email"],
+    .Kontaktinformasjon input[type="tel"] {
+        width: 100%; 
+    }
+    
+  
+    
+    .saveButton {
+        color: #fff;
+        background-color: #1de469;
+        
+    }
+    
+    .cancelButton {
+        color: #3d3333;
+        background-color: #ddd;
+        
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+
+    
+    .personsvern, .nyhetsbrev {
+        text-align: center; 
+    }
     
 
 
-
-
-    footer .kontakt-footer, .snarvei-footer, .sosialemedier-footer{
-        justify-content: space-between;
+    .utcvc {
+    flex-direction: column;
+    display: flex;    
     }
 
+    
+
     footer .footer-content {
-        flex: 1;
-        min-width: 150px; /* Mindre bredde for små skjermer */
+        min-width: 150px; 
         padding: 0px;
     }    
 

@@ -43,71 +43,78 @@
             </nav>
     </header>
 
-    <main>
+    <main class="ch">
             <section class="checkoutliste">
                 <h2>1. SHOPPINGBAGEN DIN </h2>
                 <figure>
                     <figcaption>
                         <a href="/product.html" class="btn"><img src="/img/hvit-kjole.jpg" alt="produkt 1" class="checkoutbilde"></a>
-                        <h3>Hvitkjole</h3>
-                        <p class="pris">599,- Kr</p>
-                        <p class="Farge">Farge: Hvit</p>
-                            <section class="str">
-                                <label for="str">Størrelse</label>
-                                <select id="str">
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                </select>
-                                <label for="antall">Antall</label>
-                                <input type="number" id="antall" value="1" min="1">
-                            </section>
-                            <section class="ik">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-trash"></i>
+                        <section class="altsam">
+                            <h3>Hvitkjole</h3>
+                            <p class="pris">599,- Kr</p>
+                            <p class="farge">Farge: Hvit</p>
+                                <section class="str">
+                                    <label for="str">Størrelse</label>
+                                    <select id="str">
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                    </select>
+                                    <label for="antall">Antall</label>
+                                    <input type="number" id="antall" value="1" min="1">
+                                </section>
+                                <section class="ik">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </section>
                             </section>
                     </figcaption>
                 </figure>
                 <figure>
                     <figcaption>
                         <a href="/product.html" class="btn"><img src="/img/hvit-kjole.jpg" alt="produkt 1" class="checkoutbilde"></a>
-                        <h3>Hvitkjole</h3>
-                        <p class="pris">599,- Kr</p>
-                        <p class="Farge">Farge: Hvit</p>
-                            <section class="str">
-                                <label for="str">Størrelse</label>
-                                <select id="str">
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                </select>
-                                <label for="antall">Antall</label>
-                                <input type="number" id="antall" value="1" min="1">
-                            </section>
-                            <section class="ik">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-trash"></i>
+                        <section class="altsam">
+                            <h3>Hvitkjole</h3>
+                            <p class="pris">599,- Kr</p>
+                            <p class="farge">Farge: Hvit</p>
+                                <section class="str">
+                                    <label for="str">Størrelse</label>
+                                    <select class="str">
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                    </select>
+                                    <label for="antall">Antall</label>
+                                    <input type="number" value="1" min="1">
+                                </section>
+                                <section class="ik">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </section>
                             </section>
                     </figcaption>
-                </figure>                <figure>
+                </figure>           
+                <figure>
                     <figcaption>
                         <a href="/product.html" class="btn"><img src="/img/hvit-kjole.jpg" alt="produkt 1" class="checkoutbilde"></a>
-                        <h3>Hvitkjole</h3>
-                        <p class="pris">599,- Kr</p>
-                        <p class="Farge">Farge: Hvit</p>
-                            <section class="str">
-                                <label for="str">Størrelse</label>
-                                <select id="str">
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                </select>
-                                <label for="antall">Antall</label>
-                                <input type="number" id="antall" value="1" min="1">
-                            </section>
-                            <section class="ik">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-trash"></i>
+                        <section class="altsam">
+                            <h3>Hvitkjole</h3>
+                            <p class="pris">599,- Kr</p>
+                            <p class="farge">Farge: Hvit</p>
+                                <section class="str">
+                                    <label for="str">Størrelse</label>
+                                    <select id="str">
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                    </select>
+                                    <label for="antall">Antall</label>
+                                    <input type="number" id="antall" value="1" min="1">
+                                </section>
+                                <section class="ik">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </section>
                             </section>
                     </figcaption>
                 </figure>
@@ -182,12 +189,13 @@
         <label for="kortnummer">Kortnummer</label>
         <input type="number" id="kortnummer" placeholder="3423 4793 **** 2093">
 
-        <label for="utløpsdato">Utløpsdato</label>
-        <input type="date" id="utløpsdato" placeholder="mm/dd/yyyy">
-        
-
-        <label for="cvc">CVC/CVV</label>
-        <input type="text" is="cvc" placeholder="cvc/cvv">
+        <section class="utcvc">
+            <label for="utløpsdato" class="utløpsdato">Utløpsdato</label>
+            <input type="date" id="utløpsdato" class="utløpsdato" placeholder="mm/dd/yyyy">
+            
+            <label for="cvc" class="cvc">CVC/CVV</label>
+            <input type="text" id="cvc" class="cvcc" placeholder="cvc/cvv">
+        </section>
     </section>
 
 

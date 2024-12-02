@@ -1,13 +1,11 @@
 
 
 
-body{
-    background-color: #00aced;
+body {
     font-family:Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.822);
     justify-items: center;
 }
-
 
 #global-header {
     display: flex;
@@ -15,83 +13,68 @@ body{
     align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    width: 100%;
 }
-
 #search-form{
-    position: relative; /*plasserer søkeikonet i searchbaren*/
-    width: 250px; /*hvor lang searchbaren skal være*/
+    position: relative; 
+    width: 250px; 
 }
-
-#search-form input[type="search"] {/*søkedelen*/
+#search-form input[type="search"] {
     width: 100%;
     height: 30px;
     padding: 15px; 
     padding-right: 40px;
     border: 1,5px solid; 
     border-radius: 20px;
-    font-size: 20px; /*for teksten i søkedelen, står mindre om borte*/
+    font-size: 20px; 
     color: black;
     box-sizing: border-box; 
 }
-
 #search-form button#search-btn {
+    border: 0;
+    cursor: pointer; 
+    border-radius: 20px; 
+    font-size: 20px;
     background-color: transparent; 
     position: absolute;
     right: 5px;
     top: 55%;
     transform: translateY(-50%);
-    border: 0; /*ringen rundt search er borte*/
-    cursor: pointer; /*denne funker*/
-    border-radius: 20px; /*kantene på search ikonet er runde*/
-    font-size: 20px;
 }
-
 #search-form button#search-btn:hover {
     background-color: grey;
 } 
 
-
 .menypunkter, .menypunkterb {
-    display: flex; /*aktiverer flexboxen*/
-    flex-direction: column; /*plasserer alt vertikalt under hverandre*/
-    align-items: center; /*alle elementene blir sentrert horisonalt*/
-    justify-content: center; /*sentrerer alt vertikalt hvir det blir nødvendig*/
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
 }
-
 .menypunkter a, .menypunkterb a {
-    text-decoration: none; /*fjerner understrekning av lenker*/
-    font-size: 15px; /*ønsket størrelse på skrift*/
-    margin: 5px 0; /*legger til avstand mellom hjem produkter osv under hverandre*/
-    color: black; /*farge på lenkene*/
+    text-decoration: none; 
+    font-size: 15px;
+    margin: 5px 0; 
+    color: black; 
 }
-
 .menypunkter a:hover, .menypunkterb a:hover {
-    color: #333; /*øsnket farge ved hover*/
-    text-decoration: none; /*fjerner understrekning av lenker*/
+    color: #333; 
+    text-decoration: none; 
 }
-
 .mainLogo{
+    font-size: 2rem; 
     max-width: 100%;
-    font-size: 2rem; /*størrelse på Logoen*/
-    display: block; /*logoen tar sin egen linje*/
+    display: block; 
+    
 }
-
 a.logo{
     order: 1;
-    text-decoration: none; /*fjerner understrekning av lenker*/
+    text-decoration: none; 
     color: black;
     margin-top: 5px;
-    margin-bottom: 2px;
+    margin-bottom: 2px;   
 }
-
-.menypunkter{
-    order: 0; 
-}
-
 .menypunkterb{
     order: 2;
-
 }
 
 
@@ -100,21 +83,40 @@ a.logo{
     order: 4;
     display: flex;
     gap: 7px;
-    color: rgb(0, 0, 0);
+    color: rgb(56, 71, 56);
 }
+.handlekurv a {
+    color: inherit; /* Arver farge fra foreldre */
+    text-decoration: none; /* Fjerner understrekning */
+}
+.handlekurv i.fa-user {
+    transition: color 0.3s ease; 
+}
+.handlekurv i.fa-user:hover {
+    color: rgb(17, 69, 214); 
+    cursor: pointer; 
+}
+.handlekurv i.fa-cart-shopping
+{
+    transition: color 0.3s ease; /* Jevn overgang for fargen */
+}
+.handlekurv i.fa-cart-shopping:hover {
+    color: rgb(25, 179, 145); /* Endrer fargen til blå ved hover */
+    cursor: pointer; /* Viser at det er interaktivt */
+}
+
+
 
 
 
 /*main på index.html*/
 /* Styling for bannerseksjonen; - velkommen til nettbutikken vår */
-.banner {
+.banner1 {
     display: flex; /* Aktiver flexbox */
     flex-direction: column; /* Plasser elementene vertikalt */
     justify-contet: center; /* Sentrer innholdet vertikalt */
     align-items: flex-end; /* Juster teksten til venstre */
     text-align: right;
-    background: linear-gradient(rgba(32, 24, 32, 0.5), rgba(128, 0, 128, 0.5)), 
-    url("/img/kirke.jpg") center/cover no-repeat;
     height: 600px; /* Høyde på banneren */
     width: 100%; /* Full bredde */
     padding-left: 250px;
@@ -147,7 +149,7 @@ a.logo{
     color: rgb(0, 0, 0);
     font-size: 15px;
     cursor: pointer; 
-    justify-content: space-between;
+    justify-content: space-between; 
     line-height: 1.2;
 }
 
@@ -164,6 +166,8 @@ a.logo{
 .mestPopu{
     padding: 20px; 
     text-align: center;    
+    
+    
 }
 
 .mestPopu h1{
@@ -171,7 +175,9 @@ a.logo{
     padding-bottom: 20px;
 }
 
-.filter-btn{
+.filter-btn {
+    
+    box-sizing: border-box;
     padding: 10px 25px;
     border: 1px solid black;
     border-radius: 30px; 
@@ -180,7 +186,6 @@ a.logo{
     cursor: pointer; 
     justify-content: space-between;
     line-height: 1.2;
-    width: 120px;
 }
 
 .filter-btn:hover{
@@ -189,21 +194,41 @@ a.logo{
 }
 
 
+.filter-btnNew{
+    box-sizing: border-box;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 30px; 
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer; 
+    justify-content: space-between;
+    line-height: 1.2;y
+}
+
+.filter-btnNew:hover{
+    background-color: rgb(192, 160, 160);
+    color:rgb(0, 0, 0)
+}
+
+
+
+
 
 
 .produkt-kort, h3, p {
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     
 }
 
-.produkt-kort { /*denne funker sikkert for footern, for å ikke bruke div*/
+.produkt-kort { 
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
     box-sizing: border-box;
 }
-
 
 
 
@@ -228,43 +253,86 @@ a.logo{
 
 
 
-
-/*våre mest populære kategorier*/
+/* Våre mest populære kategorier */
 .k {
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
     flex-direction: column; 
     text-align: center; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .popuKat {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 10px; 
-    margin-top: 10px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 10px;
+    width: 100%; 
+    margin-top: 20px;
 }
 
-
-
 .popuKat .kat1, .kat2, .kat3, .kat4, .kat5 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    border: 2px solid black; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    max-width: 150px 0px; 
-    height: 350px;    
-    width: 300px;  /*det sto 150 i oppgaveteksten, men vi har ikke fått bra nok instruksjoner på om den skal følges. når A krav videoen viser til 300px i bredden*/
-    padding: 10px;
-    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.popuKat .kat1:hover, 
+.popuKat .kat2:hover, 
+.popuKat .kat3:hover, 
+.popuKat .kat4:hover, 
+.popuKat .kat5:hover {
+    transform: scale(1.05); /* Zoomer inn litt for å heve på alle sider */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Legger til en subtil skygge for effekt */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.popuKat .kat1 img, 
+.popuKat .kat2 img, 
+.popuKat .kat3 img, 
+.popuKat .kat4 img, 
+.popuKat .kat5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: blur(2px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.popuKat .kat1:hover img, 
+.popuKat .kat2:hover img, 
+.popuKat .kat3:hover img, 
+.popuKat .kat4:hover img, 
+.popuKat .kat5:hover img {
+    filter: blur(0);
+}
+
+.popuKat .kat1 .sk, 
+.popuKat .kat2 .sk, 
+.popuKat .kat3 .sk, 
+.popuKat .kat4 .sk, 
+.popuKat .kat5 .sk {
+    position: relative;
+    z-index: 1;
 }
 
 
+.kat3 {
+    height: 700px; /* Ekstra høyde for kat3 */
+}
 
 
 
@@ -284,9 +352,9 @@ a.logo{
     gap: 20px; 
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
-    margin: 10px;
-    overflow: hidden; 
+    scrollbar-width: none; 
 }
+
 .anmeldelseskort::-webkit-scrollbar {
     display: none; 
     transition: all 4s ease; 
@@ -296,7 +364,7 @@ a.logo{
     scrollbar-width: thin; 
     color: rgb(85, 11, 11);
     transform: scale(1.01); 
-    transition: all 0.5s ease; 
+    transition: all 0.2s ease; 
   }
     
 .anmeldelseskort article {
@@ -316,14 +384,11 @@ a.logo{
     object-fit: cover; 
     border: 2px solid #ddd; 
 }
-
-
 .anmeldelseskort article h5 {
     font-size: 0.9rem;
     margin-bottom: 3px;
     
 }
-
 .anmeldelseskort article p {
     padding-top: 10px;
     font-size: 0.9rem;
@@ -333,11 +398,6 @@ a.logo{
 
 
 
-
-main {
-    padding: 10px;
-    font-family: Arial, sans-serif;
-}
 
 
 .checkoutliste {
@@ -912,20 +972,8 @@ footer {
     background-color: #333;
     color: white;
     box-sizing: border-box;
+    padding: 30px;
 }
-
-
-footer .logo-footer {
-    background-color: #1de469;
-    margin-bottom: 20px;
-    
-}
-
-footer{
-    margin: ;
-}
-
-
 
 footer .sosialemedier-footer a {
     margin: 10px;
@@ -1070,40 +1118,28 @@ footer p {
         margin-bottom: 20px;
     }
     
-    .anmeldelseskort {
-        display: flex; 
-        gap: 20px; 
-        overflow-x: auto; 
-        scroll-snap-type: x mandatory; 
-        padding: 10px;
-        scrollbar-width: none; 
-        
-    }
+
     
     .anmeldelseskort::-webkit-scrollbar {
         display: none; 
     }
 
 
-
+    .filter-btnNew, .filter-btn{
+    width: 120px;
+}
 
     .produkt-kort{
         display: grid; 
         grid-template-columns: repeat(3, 1fr); 
         justify-items: center;
     }
-
-
-    
     .popuKat {
         align-items: flex-start;
         grid-template-areas: 
             "kat1 kat2 kat3"
             "kat4 kat4 kat5";
-        
     }
-    
-
     .k {
         text-align: center;
     }
@@ -1112,52 +1148,28 @@ footer p {
         font-size: 1.8rem;
         justify-content: center;
     }
-    
     .k p {
         font-size: 1rem;
         color: #555;
     }
-    
- 
     .kat1, .kat2, .kat3, .kat4, .kat5 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px; 
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #fff; 
-        text-align: center;
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        aspect-ratio: 2 / 3; /* Holder proporsjoner på boksene */
     }
-    
     .kat1 {
         grid-area: kat1;
-        background-color: #1abc9c; /* Bytt ut med bilde */        
     }
-    
     .kat2 {
         grid-area: kat2;
-        background-color: #3498db; /* Bytt ut med bilde */
     }
-    
     .kat3 {
         grid-area: kat3;
-        background-color: #e74c3c; /* Bytt ut med bilde */
-        height: 500px;
-        grid-row-end: none;
-        
+        height: 600px;
+        grid-row-end: none;   
     }
-    
     .kat4 {
         grid-area: kat4;
-        background-color: #9b59b6; /* Bytt ut med bilde */
-        width: 700px;
         grid-column: span 2; 
     }
-    
     .kat5 {
         grid-area: kat5;
         background-color: #f39c12; /* Bytt ut med bilde */
@@ -1234,8 +1246,7 @@ footer p {
         background-color: #fff;
         border-radius: 10px; 
         flex: 0 0 auto; 
-        height: auto; 
-       
+        height: auto;  
     }
 
     .ch{
@@ -1300,9 +1311,13 @@ footer p {
     
 
     footer {
-        background-color: #00aced;
         width: 100%; 
     }    
+
+    .logo-footer{
+        width: 100%;
+        padding-left: 50px;
+    }
 
 
 

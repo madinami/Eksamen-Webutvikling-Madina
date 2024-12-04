@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,35 +11,29 @@
 </head>
 <body>
     <header id="global-header">
-            <a href="/index.html" class="logo">
-                <h1 id="mainLogo">LOGO</h1></a>
-
-        <form id="search-form">
-            <label for="search"></label>
-            <input type="search" placeholder="søk etter..." id="search">
-            <button type="submit" id="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-
-            <nav class="menypunkter">
-                <a href="/index.html" id="logo"></a>
-                <a href="/index.html">Hjem</a>
-                <a href="/product.html">produkter</a>
-            </nav>
-            
-            <nav class="menypunkterb">
-                <a href="#popuKat">kategorier</a>
-                <a href="#kontaktoss">kontakt oss</a>
-            </nav>
-
-            <nav class="handlekurv">
-                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-regular fa-heart"></i>
-            </nav>
-    </header>
-
+        <a href="/index.html" class="logo">
+            <h1 class="mainLogo">LOGO</h1></a>
+    <form id="search-form">
+        <label for="search"></label>
+        <input type="search" placeholder="søk etter..." id="search">
+        <button type="submit" id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+        <nav class="menypunkter">
+            <a href="/index.html">Hjem</a>
+            <a href="/product.html">produkter</a>
+        </nav>
+        <nav class="menypunkterb">
+            <a href="/index.html#kategorier">kategorier</a>
+            <a href="#kontaktoss">kontakt oss</a>
+        </nav>
+        <nav class="handlekurv">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-heart"></i>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+</header>
     <main class="ch">
             <section class="checkoutliste">
                 <h2>1. SHOPPINGBAGEN DIN </h2>
@@ -53,15 +44,15 @@
                             <h3>Hvitkjole</h3>
                             <p class="pris">599,- Kr</p>
                             <p class="farge">Farge: Hvit</p>
-                                <section class="str">
-                                    <label for="str">Størrelse</label>
-                                    <select id="str">
-                                        <option>S</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                    </select>
-                                    <label for="antall">Antall</label>
-                                    <input type="number" id="antall" value="1" min="1">
+                            <section class="str">
+                                <label for="select-str-1">Størrelse</label>
+                                <select id="select-str-1" class="str">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>       
+                                <label for="antall-1">Antall</label>
+                                <input type="number" id="antall-1" value="1" min="1">
                                 </section>
                                 <section class="ik">
                                     <i class="fa-regular fa-heart"></i>
@@ -77,15 +68,15 @@
                             <h3>Hvitkjole</h3>
                             <p class="pris">599,- Kr</p>
                             <p class="farge">Farge: Hvit</p>
-                                <section class="str">
-                                    <label for="str">Størrelse</label>
-                                    <select class="str">
-                                        <option>S</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                    </select>
-                                    <label for="antall">Antall</label>
-                                    <input type="number" value="1" min="1">
+                            <section class="str">
+                                <label for="select-str-2">Størrelse</label>
+                                <select id="select-str-2" class="str">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>   
+                                <label for="antall-2">Antall</label>
+                                <input type="number" id="antall-2" value="1" min="1">
                                 </section>
                                 <section class="ik">
                                     <i class="fa-regular fa-heart"></i>
@@ -101,15 +92,15 @@
                             <h3>Hvitkjole</h3>
                             <p class="pris">599,- Kr</p>
                             <p class="farge">Farge: Hvit</p>
-                                <section class="str">
-                                    <label for="str">Størrelse</label>
-                                    <select id="str">
-                                        <option>S</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                    </select>
-                                    <label for="antall">Antall</label>
-                                    <input type="number" id="antall" value="1" min="1">
+                            <section class="str">
+                                <label for="select-str-3">Størrelse</label>
+                                <select id="select-str-3" class="str">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>   >
+                                <label for="antall-1">Antall</label>
+                                <input type="number" id="antall-3" value="1" min="1">
                                 </section>
                                 <section class="ik">
                                     <i class="fa-regular fa-heart"></i>
@@ -119,7 +110,6 @@
                     </figcaption>
                 </figure>
             </section>
-            
     <section class="pers">
         <h2>2. DINE OPPLYSNINGER</h2>
         <form method="post" class="opplysninger">
@@ -140,7 +130,6 @@
             <input type="text" id="poststed" placeholder="Halden" required>
         </form>
     </section>
-
     <section class="Kontaktinformasjon">
         <form method="post" class="opplysninger"></form>
                 <h4>Kontaktinformasjon</h4>
@@ -154,9 +143,6 @@
             <button type="submit" class="saveButton">Lagre</button>
             <button type="reset" class="cancelButton">Avbryt</button>
         </section>
-        
-
-
     <section class="leveres">
         <h2>3. LEVERING</h2>
         <form method="post">
@@ -183,21 +169,24 @@
                 </section>
         </form>
     </section>
-        
     <section class="betal">
-        <h2>4. BETALNING<p>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p></h2> 
+        <h2>4. BETALNING</h2>
+        <p>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p>
         <label for="kortnummer">Kortnummer</label>
         <input type="number" id="kortnummer" placeholder="3423 4793 **** 2093">
-
         <section class="utcvc">
             <label for="utløpsdato" class="utløpsdato">Utløpsdato</label>
-            <input type="date" id="utløpsdato" class="utløpsdato" placeholder="mm/dd/yyyy">
+            <input type="date" id="utløpsdato" class="utløpsdato">
             
             <label for="cvc" class="cvc">CVC/CVV</label>
             <input type="text" id="cvc" class="cvcc" placeholder="cvc/cvv">
         </section>
     </section>
 
+
+
+
+    
 
 
 <section class="personsvern">
@@ -213,35 +202,26 @@
     <label class="nyhetsbrev">
         <input type="checkbox"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
 </section>
-
-
-
-
 </main>
-    
 <footer>
     <section class="logo-footer">
         <h2>LOGO</h2>
         <p>Lorem Ipsum is simply dummy</p>
     </section>
-
-    <div class="footer-content">
+    <section class="footer-content">
         <section class="kontakt-footer">
             <h4 id="kontaktoss">KONTAKT OSS</h4>
-            <p><strong>Telefon:</strong> 69 60 80 01</p>
-            <p><strong>Sentralbord:</strong> 69 60 80 00</p>
-            <p><strong>Adresse:</strong> B R A veien 4, 1757 Halden</p>
-            <p><strong>E-post:</strong> postmottak@hiof.no</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Telefon:</strong> 69 60 80 01</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Sentralbord:</strong> 69 60 80 00</p>
+            <p><i class="fa-solid fa-house"></i> <strong>Adresse:</strong> B R A veien 4, 1757 Halden</p>
+            <p><i class="fa-regular fa-envelope"></i> <strong>E-post:</strong> postmottak@hiof.no</p>
         </section>
-
         <section class="snarvei-footer">
             <h4>SNARVEIER</h4>
             <p>Produkter</p>
             <p>Kategorier</p>
-            <p>Kontakt OSS</p>
+            <p>Kontakt oss</p>
         </section>
-    </div>
-
     <section class="sosialemedier-footer">
         <h4>SOSIALE MEDIER</h4>
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -249,9 +229,8 @@
         <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
     </section>
+    </section>
 </footer>
-
-
 </body>
 </html>
 

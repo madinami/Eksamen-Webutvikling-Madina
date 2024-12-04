@@ -369,150 +369,115 @@ a.logo{
 
 
 
-/* Våre mest populære kategorier */
+
 .k {
     display: flex; 
-    flex-direction: column; 
-    text-align: center; 
     justify-content: center; 
     align-items: center; 
     padding: 0; 
+    flex-direction: column; 
+    text-align: center; 
     margin: 0; 
 }
-
 .popuKat {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 10px;
     width: 100%; 
     margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
 }
-
 .popuKat .kat1, .kat2, .kat3, .kat4, .kat5 {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 400px;
     width: 100%;
     text-align: center;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    height: 400px;
     transition: transform 0.3s ease-in-out; 
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
 }
-
-.popuKat .kat1:hover, 
-.popuKat .kat2:hover, 
-.popuKat .kat3:hover, 
-.popuKat .kat4:hover, 
-.popuKat .kat5:hover {
-    transform: scale(1.05); /* Zoomer inn litt for å heve på alle sider */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Legger til en subtil skygge for effekt */
+.popuKat .kat1:hover, .popuKat .kat2:hover, .popuKat .kat3:hover, .popuKat .kat4:hover, .popuKat .kat5:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-
 }
-
-.popuKat .kat1 img, 
-.popuKat .kat2 img, 
-.popuKat .kat3 img, 
-.popuKat .kat4 img, 
-.popuKat .kat5 img {
+.popuKat .kat1 img, .popuKat .kat2 img, .popuKat .kat3 img, .popuKat .kat4 img, .popuKat .kat5 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     position: absolute;
     filter: blur(2px);
     transition: filter 0.3s ease-in-out;
+    object-fit: cover;
 }
-
-.popuKat .kat1:hover img, 
-.popuKat .kat2:hover img, 
-.popuKat .kat3:hover img, 
-.popuKat .kat4:hover img, 
-.popuKat .kat5:hover img {
+.popuKat .kat1:hover img, .popuKat .kat2:hover img, .popuKat .kat3:hover img, .popuKat .kat4:hover img, .popuKat .kat5:hover img {
     filter: blur(0);
 }
-
-.popuKat .kat1 .sk, 
-.popuKat .kat2 .sk, 
-.popuKat .kat3 .sk, 
-.popuKat .kat4 .sk, 
-.popuKat .kat5 .sk {
+.popuKat .kat1 .sk, .popuKat .kat2 .sk, .popuKat .kat3 .sk, .popuKat .kat4 .sk, .popuKat .kat5 .sk {
     position: relative;
     z-index: 1;
 }
-
-
 .kat3 {
-    height: 700px; /* Ekstra høyde for kat3 */
+    height: 800px;/* Ekstra høyde for kat3 */
 }
-
 
 
 .anmldelser {
-    text-align: center;
-    max-width: 100%;
     overflow-x: auto; 
     overflow: hidden;
+    text-align: center;
+    max-width: 100%;
 }
-
 .anmldelser h2 {
     font-size: 1.8rem;
 }
-
 .anmeldelseskort {
     display: flex; 
-    gap: 20px; 
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
     scrollbar-width: none; 
+    gap: 20px; 
 }
-
 .anmeldelseskort::-webkit-scrollbar {
     display: none; 
     transition: all 4s ease; 
-  }
-
-  .anmeldelseskort:hover {
-    scrollbar-width: thin; 
-    color: rgb(85, 11, 11);
-    transform: scale(1.01); 
-    transition: all 0.2s ease; 
-  }
-    
+}
+.anmeldelseskort:hover {
+transform: scale(1.01); 
+transition: all 0.2s ease; 
+scrollbar-width: thin; 
+color: rgb(85, 11, 11);
+}
 .anmeldelseskort article {
-    flex: 0 0 200px; 
-    background-color: #f9f9f9;
-    border: 1px solid #e7bfbf;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start; 
+    flex: 0 0 200px; 
+    background-color: #f9f9f9;
+    border: 1px solid #e7bfbf;
     text-align: left;
 }
 .anmeldelseskort article img {
     width: 80px;
     height: 80px; 
+    border: 2px solid #ddd; 
     border-radius: 50%; 
     object-fit: cover; 
-    border: 2px solid #ddd; 
 }
 .anmeldelseskort article h5 {
     font-size: 0.9rem;
     margin-bottom: 3px;
-    
 }
 .anmeldelseskort article p {
     padding-top: 10px;
-    font-size: 0.9rem;
     color: #333;
+    font-size: 0.9rem;
 }
-
-
-
 
 
 
@@ -521,301 +486,249 @@ a.logo{
     flex-direction: column;
     gap: 10px; 
 }
-
-/* Overskrift styling */
 .checkoutliste h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     padding-left: 40px;
 }
-
-
 .checkoutbilde {
     width: 150px;
     height: auto;
     object-fit: cover; 
 }
 
-
 figcaption {
+    justify-content: space-between;
+    flex: 1;  
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex: 1; 
 }
-
-
 figcaption h3 {
+    margin-bottom: 5px;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 5px;
 }
-
-
 figcaption .pris {
-    font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
+    font-size: 1rem;
+
 }
-
-
 figcaption .Farge {
     font-size: 1 rem;
     color: #666;
     margin-bottom: 10px;
 }
 
-
 .str {
     display: flex;
-    gap: 10px;
+    margin-top: 10px;  gap: 10px;
     align-items: center; 
-    margin-top: 10px; 
 }
-
-
 .str label {
     font-size: 0.9rem;
     color: #333;
 }
-
-
 .str select, .str input {
-    padding: 5px; 
-    border: 1px solid #ddd; 
     border-radius: 5px; 
     font-size: 0.9rem; 
+    padding: 5px; 
+    border: 1px solid #ddd; 
     width: 60px; 
     cursor: pointer; 
 }
-
-
 .str select {
     background-color: rgb(209, 209, 209); 
 }
-
 .str input[type="number"] {
     -moz-appearance: textfield; 
     -webkit-appearance: number-input; 
     appearance: number-input; 
     text-align: center;
 }
-
-
 .str input[type="number"]::-webkit-inner-spin-button,
 .str input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: inner-spin-button; 
     opacity: 1;
     margin: 0;
 }
-
 .str input[type="number"]::-moz-inner-spin-button {
-    -moz-appearance: inner-spin-button; /* Synlige piler i Firefox */
-    opacity: 1;
-    
+    -moz-appearance: inner-spin-button; 
+    opacity: 1;   
 }
 
-
-
-/* Ikonseksjon */
 .ik {
     display: flex;
-    gap: 10px; /* Avstand mellom ikonene */
+    gap: 10px; 
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #333;
-    
+    color: #333;   
 }
-
 .ik i:hover {
     color: #953131;
     cursor: pointer;
 }
-
-/*Kode for 2.DINE OPPLYSNINGER - checkoutside*/
 .checkoutliste, .pers, .Kontaktinformasjon, .leveres, .betal, .personsvern {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    font-size: 1.8rem;
     margin-bottom: 20px;
     font-size: 1.8rem;
     margin-bottom: 20px; 
+    padding: 20px;
+    width: 100%;
+    font-size: 1.8rem;
 }
-
 .saveButton, .cancelButton{
     align-items: center;
     width: 100%;
-    background-color: #333; /* Mørk bakgrunn */
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #333;
     color: white;
     font-size: 1rem;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold;
 }
-
 h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
     margin-bottom: 20px;
     display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 10px; 
     align-items: center;
-    gap: 10px; /* Avstand mellom teksten og ikonet */
 }
-
 label {
-    display: block; /* Sørg for at etiketten står over input */
-    font-size: 1rem;
-    margin-bottom: 5px;
     color: #333;  
+    display: block; 
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
-
 input {
     padding: 10px;
+    box-sizing: border-box; 
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
-
 input::placeholder {
     padding-left: 10px;
-    color: #aaa;
-    
+    color: #aaa;    
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
-    background-color: #f9f9f9; /* Lys bakgrunn for input */
+    background-color: #f9f9f9; 
     color: #333;
+    width: 100%; 
 }
-
 input:focus {
     border-color: #555;
     outline: none;
 }
-
-
 button:hover {
-    background-color: #555; /* Lysere grå ved hover */
-    
+    background-color: #555;    
 }
-
 a:hover {
     text-decoration: underline;
 }
 
-/* Styling for feltet med id "kortnummer" */
+
 #kortnummer {
-    -moz-appearance: textfield; /* Fjern standard stil i Firefox */
-    -webkit-appearance: none; /* Fjern standard stil i Chrome/Safari */
-    appearance: none; /* Fjern standard stil i moderne nettlesere */
-    width: 100%; /* Full bredde */
-    padding-right: 15px; /* Gi plass til pilene */
-    font-size: 1rem;
-    border: 1px solid #ddd; /* Lett grå kant */
-    border-radius: 5px; /* Runde hjørner */
-    text-align: left; /* Venstrejusterer tekst */
+    -moz-appearance: textfield; 
+    -webkit-appearance: none; 
+    text-align: left; 
     background-color: #fff;
-    box-sizing: border-box; /* Sørg for at padding og bredde ikke overlapper */
+    box-sizing: border-box;
+    width: 100%; 
+    padding-right: 15px;
+    appearance: none; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 1rem;
+  
 }
-/* Stil for opp- og ned-piler i Chrome/Safari */
 #kortnummer::-webkit-inner-spin-button {
-    -webkit-appearance: inner-spin-button; /* Behold pilene i Chrome/Safari */
-    opacity: 1; /* Sørg for at pilene alltid er synlige */
+    -webkit-appearance: inner-spin-button; 
+    opacity: 1; 
 }
-/* Stil for opp- og ned-piler i Firefox */
 #kortnummer::-moz-inner-spin-button {
-    -moz-appearance: inner-spin-button; /* Behold pilene i Firefox */
+    -moz-appearance: inner-spin-button; 
     opacity: 1; 
 }
 
 .Kontaktinformasjon {
-    border: 1px solid #ddd; /* Lys grå kant */  
+    border: 1px solid #ddd;  
+    border-top: #fff;
     margin-left: 20px;
     margin-right: 20px;
-    border-top: #fff;
 }
 .pers { 
-    border: 1px solid #ddd; /* Lys grå kant */  
     margin-left: 20px;
     margin-right: 20px;
     border-bottom: #fff;
+    border: 1px solid #ddd; 
 }
 .ekspress, .standard, .hentepakke, .leveres, .betal, .personsvern, .checkoutliste {
-    border: 1px solid #ddd; /* Lys grå kant */  
+    border: 1px solid #ddd; 
+    width: 100%; 
     margin: 20px;   
 }
-
-.personvern .h1, .personvern ,yp {
-    text-align: center; /* Sentraliser teksten horisontalt */
-    margin: 10px 0; /* Jevn avstand mellom elementene */
+.personvern .h1, .personvern, .yp {
+    text-align: center; 
+    margin: 10px 0; 
 }
-
 
 
 .betalingsseksjon {
-    font-family: Arial, sans-serif;
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    max-width: 400px; 
     text-align: center;
     padding: 20px;
-    border: 1px solid #ddd; /* Ramme rundt seksjonen */
-    border-radius: 10px; /* Runde hjørner */
-    max-width: 400px; /* Maks bredde for seksjonen */
-    margin: 20px auto; /* Sentraliser seksjonen */
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
 }
-
 .betalingsseksjon p {
-    margin: 10px 0; /* Avstand mellom paragrafene */
-    font-size: 1rem;
     color: #333;
+    margin: 10px 0;
+    font-size: 1rem;
 }
-
 .betalingsseksjon h1 {
-    font-size: 2rem; /* Størrelse på prisen */
+    font-size: 2rem; 
+    color: black;
     font-weight: bold;
     margin: 10px 0;
-    color: black;
 }
-
 .fullfør-knapp {
-    background-color: #333; /* Svart bakgrunn */
-    color: white; /* Hvit tekst */
+    color: white; 
+    background-color: #333; 
     font-size: 1rem;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Runde 
-    cursor: pointer;
-    margin: 15px 0;
-    width: 100%; /* Full bredde */
+    border-radius: 5px; 
 }
-
 .fullfør-knapp:hover {
-    background-color: #555; /* Lysere svart ved hover */
+    background-color: #555; 
 }
-
 .bekreftelse-tekst {
-    font-size: 0.9rem;
     color: #666;
     margin-top: 20px;
-    line-height: 1.5; /* Gir bedre lesbarhet */
+    line-height: 1.5; 
+    font-size: 0.9rem;
 }
-
 .nyhetsbrev {
+    display: block; /
+    margin: 10px 0;
+    text-align: left; 
     font-size: 0.9rem;
     color: #333;
-    display: block; /* Hver label på egen linje */
-    margin: 10px 0;
-    text-align: left; /* Venstrejustering */
-    
 }
-
 .nyhetsbrev input {
     margin-right: 10px; 
 }
-
 .produkter {
     height: 100%; 
     align-items: center; 

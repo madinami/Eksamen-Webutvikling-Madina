@@ -111,33 +111,123 @@ a.logo{
 
 /*main på index.html*/
 /* Styling for bannerseksjonen; - velkommen til nettbutikken vår */
-.banner1 {
-    display: flex; /* Aktiver flexbox */
-    flex-direction: column; /* Plasser elementene vertikalt */
-    justify-contet: center; /* Sentrer innholdet vertikalt */
-    align-items: flex-end; /* Juster teksten til venstre */
-    text-align: right;
-    height: 600px; /* Høyde på banneren */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banners {
+    display: flex;
+    overflow-x: auto; /* Aktiverer horisontal scrolling */
+    scroll-snap-type: x mandatory; /* Scroll snapping aktivert */
     width: 100%; /* Full bredde */
-    padding-left: 250px;
-    padding-right: 40px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    border-radius: 20px; /* Runde hjørner */
-    box-sizing: border-box; /* Sørg for at padding ikke påvirker størrelse */
-    font-weight: bold;
+    position: relative;
+    
 }
 
-.banner h3 {
-    font-size: 2rem; /* Størrelse på ingressen */
+
+.banners > section {
+    flex: 0 0 100%; /* Hvert bilde tar 100% av bredden */
+    height: 100%; /* Full høyde */
+    scroll-snap-align: start; /* Snap til start */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover; /* Bildet dekker hele seksjonen */
+    background-position: center; /* Sentraliser bildet */
 }
 
-/* Styling for ingressen */
-.banner p {
-    font-size: 1rem; 
-    margin-bottom: 40px; 
-    max-width: 500px; 
-    line-height: 1.1; 
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin: 20px;
+    max-width: 1200px; /* Maks bredde på 1200px */
+    min-width: 300px; /* Minste bredde på 300px */
+}
+
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px;
+    border-radius: 20px;    
+    max-width: 1200px; /* Maks bredde på 1200px */
+    min-width: 300px; /* Minste bredde på 300px */
+}
+
+
+.tekst-v {
+    margin: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 10px;
+    max-width: 30%; 
+    border-radius: 20px; 
+    left: 10px; 
+}
+.tekst-h {
+    margin: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    max-width: 30%; 
+    border-radius: 20px; 
+    right: 10px; 
+    text-align: right;
 }
 
 /* Styling for knappen */
@@ -152,11 +242,79 @@ a.logo{
     justify-content: space-between; 
     line-height: 1.2;
 }
-
 .seMer:hover{
     background-color: black;
     color:rgb(255, 255, 255)
 }
+
+
+
+
+    
+
+
+.fa-arrow-left, .fa-arrow-right {
+    font-size: 1.2rem; /* Størrelse på pilene */
+    color: black; /* Farge på pilene */
+}
+
+
+
+
+
+.ar {
+    position: absolute; 
+    right: 50px;
+    transform: translateY(-50%); 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    z-index: 10; 
+    align-items: center; 
+    justify-content: center; 
+
+}
+
+.al {
+    position: absolute; /* Plasser elementet relativt til .banner */
+    left: 50px; /* 50px fra venstre */
+    transform: translateY(-50%); /* Juster for nøyaktig sentrering */
+    width: 40px; /* Bredden på knappen */
+    height: 40px; /* Høyden på knappen */
+    border-radius: 50%; /* Gjør knappen til en sirkel */
+    display: flex; 
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent hvit bakgrunn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtil skygge */
+    cursor: pointer; 
+    z-index: 10; /* Sørger for at knappen er over bildet */
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,17 +324,12 @@ a.logo{
 .mestPopu{
     padding: 20px; 
     text-align: center;    
-    
-    
 }
-
 .mestPopu h1{
     font-size: 30px;
     padding-bottom: 20px;
 }
-
 .filter-btn {
-    
     box-sizing: border-box;
     padding: 10px 25px;
     border: 1px solid black;
@@ -187,7 +340,6 @@ a.logo{
     justify-content: space-between;
     line-height: 1.2;
 }
-
 .filter-btn:hover{
     background-color: black;
     color:rgb(255, 255, 255)
@@ -1308,6 +1460,51 @@ footer p {
     display: flex;    
     }
 
+
+
+
+
+    .ar {
+        position: absolute; 
+
+        right: 80px; 
+        transform: translateY(-50%); 
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%; 
+        display: flex; 
+        background-color: rgba(255, 255, 255, 0.8); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        cursor: pointer; 
+        z-index: 10; 
+        align-items: center; 
+        justify-content: center; 
+    
+    }
+    
+    
+    .al {
+        position: absolute; 
+        top: 75%; 
+        left: 80px; 
+        transform: translateY(-50%); 
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%;
+        display: flex; 
+        background-color: rgba(255, 255, 255, 0.8); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        cursor: pointer; 
+        z-index: 10; 
+        align-items: center; 
+        justify-content: center; 
+    
+    }
+
+
+
+
+
     
 
     footer {
@@ -1317,6 +1514,11 @@ footer p {
     .logo-footer{
         width: 100%;
         padding-left: 50px;
+
+
+
+        flex: 1; /* Gjør hver container lik bredde */
+
     }
 
 
